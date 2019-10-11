@@ -1,16 +1,36 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 
-<form method="POST" action="/THOTDSE63073/MainController">
-	<input name="txtPhone" placeholder="Nhập số cần tìm" type="text" autofocus/>
+<form method="POST" action="MainController" id="search-form">
+    <input name="phone" placeholder="Nhập số cần tìm" type="text" autofocus/>
 
-	<label>
-		<input name="startWith" value="02" type="checkbox"/>
-		<input name="startWith" value="03" type="checkbox"/>
-		<input name="startWith" value="05" type="checkbox"/>
-		<input name="startWith" value="07" type="checkbox"/>
-		<input name="startWith" value="08" type="checkbox"/>
-		<input name="startWith" value="09" type="checkbox"/>
-	</label>
-	<input name="btnAction" value="Tìm" type="submit"/>
+    <label>
+        Bắt đầu
+        <input name="startWith" value="02" type="checkbox"/>
+        <input name="startWith" value="03" type="checkbox"/>
+        <input name="startWith" value="05" type="checkbox"/>
+        <input name="startWith" value="07" type="checkbox"/>
+        <input name="startWith" value="08" type="checkbox"/>
+        <input name="startWith" value="09" type="checkbox"/>
+    </label>
+
+    <label>
+        Không chứa
+        <% for (int i = 0; i < 10; ++i) { %>
+        <input name="notInclude" value="<%=i%>" type="checkbox"/>
+        <%}%>
+    </label>
+
+    <label>
+        Nhà mạng
+        <input name="networkOperator" value="Viettel" type="checkbox"/>
+        <input name="networkOperator" value="Vinaphone" type="checkbox"/>
+    </label>
+
+    <label>
+        Giá cao nhất
+        <input name="priceLimit" type="range" min="0" max="100000000000"/>
+
+    </label>
+    <input name="btnAction" value="Tìm" type="submit"/>
 </form>

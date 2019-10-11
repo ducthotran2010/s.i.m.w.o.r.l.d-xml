@@ -16,6 +16,12 @@
 	<body>
 		<%@include file="components/navbar.jspf" %>
 		<script>document.getElementById('nav-home').classList.add('active');</script>
+
+
 		<%@include file="components/search-section.jspf" %>
+		<script src="${pageContext.request.contextPath}/assests/js/constants.js"></script>
+		<script src="${pageContext.request.contextPath}/assests/js/utils/param.js"></script>
+		<script src="${pageContext.request.contextPath}/assests/js/utils/query.js"></script>
+		<script src="${pageContext.request.contextPath}/assests/js/MVOjs/home.js"></script>
 	</body>
 </html>
