@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="XMLPJ_THOTDSE63073" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="sqljdbc42" />
+        </element>
       </element>
     </root>
   </artifact>

@@ -1,0 +1,16 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<form method="POST" action="/THOTDSE63073/MainController">
+	<input name="txtPhone" placeholder="Nhập số cần tìm" type="text" autofocus/>
+
+	<label>
+		<input name="startWith" value="02" type="checkbox"/>
+		<input name="startWith" value="03" type="checkbox"/>
+		<input name="startWith" value="05" type="checkbox"/>
+		<input name="startWith" value="07" type="checkbox"/>
+		<input name="startWith" value="08" type="checkbox"/>
+		<input name="startWith" value="09" type="checkbox"/>
+	</label>
+	<input name="btnAction" value="Tìm" type="submit"/>
+</form>

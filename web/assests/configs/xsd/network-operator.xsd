@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://ducthotran2010.github.io/xsd/network-operator"
+           xmlns:tag="http://ducthotran2010.github.io/xsd/tag"
+           xmlns:sim="http://ducthotran2010.github.io/xsd/sim"
+           targetNamespace="http://ducthotran2010.github.io/xsd/network-operator"
+           elementFormDefault="qualified">
+    <xs:import namespace="http://ducthotran2010.github.io/xsd/sim" schemaLocation="sim.xsd"/>
+    <xs:import namespace="http://ducthotran2010.github.io/xsd/tag" schemaLocation="tag.xsd"/>
+    <xs:element name="NetworkOperator" xmlns="http://ducthotran2010.github.io/xsd/network-operator">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tag:Tag" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="sim:NetworkOperatorType"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

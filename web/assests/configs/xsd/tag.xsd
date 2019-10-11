@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://ducthotran2010.github.io/xsd/tag"
+           xmlns:sim="http://ducthotran2010.github.io/xsd/sim"
+           targetNamespace="http://ducthotran2010.github.io/xsd/tag"
+           elementFormDefault="qualified">
+    <xs:import namespace="http://ducthotran2010.github.io/xsd/sim" schemaLocation="sim.xsd"/>
+    <xs:element name="Tag" xmlns="http://ducthotran2010.github.io/xsd/tag">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="sim:Sim" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

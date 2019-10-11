@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://ducthotran2010.github.io/xsd/sim"
+           targetNamespace="http://ducthotran2010.github.io/xsd/sim"
+           elementFormDefault="qualified">
+    <xs:element name="Sim">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="PhoneNumber" type="PhoneNumberType"></xs:element>
+                <xs:element name="Price" type="xs:unsignedInt"></xs:element>
+                <xs:element name="Supplier" type="SupplierType"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="PhoneNumberType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="NetworkOperatorType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Viettel"/>
+            <xs:enumeration value="Vinaphone"/>
+            <xs:enumeration value="Mobifone"/>
+            <xs:enumeration value="Vietnamobile"/>
+            <xs:enumeration value="Gmobile"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SupplierType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Sodepami"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NOT USE ANY MORE -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="NetworkOperators">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NetworkOperator" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Sim" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="PhoneNumber" type="xs:int"></xs:element>
+                                        <xs:element name="Price" type="xs:string"></xs:element>
+                                        <xs:element name="Tag" type="xs:string"></xs:element>
+                                        <xs:element name="NetworkOperator" type="xs:string"></xs:element>
+                                        <xs:element name="Supplier" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xmlns" type="xs:string"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

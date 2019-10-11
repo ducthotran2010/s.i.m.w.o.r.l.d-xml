@@ -1,0 +1,38 @@
+<%@ page pageEncoding="UTF-8" %>
+
+<h2 class="py-40 text-center ls-10 select-none banner">thegioithesim</h2>
+<div>
+	<ul class="nav flex flex-row">
+		<%
+			final String[] navNames = {
+				"TRANG CHỦ",
+				"TOP SIM",
+				"TRA CỨU",
+				"TIN TỨC",
+				"ĐƠN HÀNG MỚI"
+			};
+
+			final String[] navIds = {
+				"nav-home",
+				"nav-top-top",
+				"nav-look-up",
+				"nav-news",
+				"nav-orders"
+			};
+
+			final String[] navLinks = {
+				"/THOTDSE63073/",
+				"/THOTDSE63073/#",
+				"/THOTDSE63073/#",
+				"/THOTDSE63073/#",
+				"/THOTDSE63073/#",
+			};
+
+			for (int i = 0; i < navNames.length; ++i) { %>
+				<a class="flex-1" href="<%= navLinks[i] %>">
+					<li id="<%= navIds[i] %>" class="text-center p-10 upper-case transition text-14 text-bold nav-item cursor-pointer">
+						<%= navNames[i] %>
+					</li>
+				</a>
+			<%}%>
+</div>

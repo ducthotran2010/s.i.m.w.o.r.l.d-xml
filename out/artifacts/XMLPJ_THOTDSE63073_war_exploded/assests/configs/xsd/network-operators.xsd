@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://ducthotran2010.github.io/xsd/network-operators"
+           xmlns:nw="http://ducthotran2010.github.io/xsd/network-operator"
+           targetNamespace="http://ducthotran2010.github.io/xsd/network-operators"
+           elementFormDefault="qualified">
+    <xs:import namespace="http://ducthotran2010.github.io/xsd/network-operator" schemaLocation="network-operator.xsd"/>
+    <xs:element name="NetworkOperators" xmlns="http://ducthotran2010.github.io/xsd/network-operators">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nw:NetworkOperator" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

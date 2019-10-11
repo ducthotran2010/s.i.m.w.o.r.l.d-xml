@@ -1,16 +1,21 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: thotd
-  Date: 10/11/19
-  Time: 7:57 PM
-  To change this template use File | Settings | File Templates.
+<%-- 
+    Document   : index
+    Created on : Sep 28, 2019, 11:02:49 PM
+    Author     : Duc Tho Tran
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Trang chủ | Thế Giới Thẻ SIM</title>
+	<link rel="icon" href="${pageContext.request.contextPath}/assests/image/logo.png"/>
+	<link href="${pageContext.request.contextPath}/assests/css/global.css" rel="stylesheet" type="text/css"/>
+</head>
+	<body>
+		<%@include file="components/navbar.jspf" %>
+		<script>document.getElementById('nav-home').classList.add('active');</script>
+		<%@include file="components/search-section.jspf" %>
+	</body>
 </html>
