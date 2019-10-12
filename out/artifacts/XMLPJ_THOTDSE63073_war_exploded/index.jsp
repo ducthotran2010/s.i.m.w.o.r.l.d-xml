@@ -15,10 +15,24 @@
 </head>
 	<body>
 		<%@include file="components/navbar.jspf" %>
-		<script>document.getElementById('nav-home').classList.add('active');</script>
-
-
 		<%@include file="components/search-section.jspf" %>
+		<div id="loader" class="transition hidden">
+			Loading...
+		</div>
+		<div id="result-view" class="transition hidden">
+			Result
+
+			<div id="pagination-container" class="">
+				<button id="pagination-left">left</button>
+				<form id="pagination-form">
+					<input id="pagination-input" type="number" min="1"/>
+				</form>
+				<span id="pagination-infor">of 0 pages</span>
+				<button id="pagination-right">right</button>
+			</div>
+		</div>
+
+		<script>document.getElementById('nav-home').classList.add('active');</script>
 		<script src="${pageContext.request.contextPath}/assests/js/constants.js"></script>
 		<script src="${pageContext.request.contextPath}/assests/js/utils/param.js"></script>
 		<script src="${pageContext.request.contextPath}/assests/js/utils/query.js"></script>
