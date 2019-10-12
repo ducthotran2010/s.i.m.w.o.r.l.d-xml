@@ -1,5 +1,3 @@
 const constants = {
-
+  GENERAL_CONTROLLER: 'GeneralController',
 };
-
-export { constants };

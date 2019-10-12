@@ -1,18 +1,14 @@
 var MyUtils = {
   callXhr: function (method, url, params, callback) {
       var xhr = new XMLHttpRequest();
-      xhr.open(method, url, true);
-      if (method == 'POST') {
-          xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-      } else {
-          //xhr.setRequestHeader('Content-type', 'text/xml');
-      }
+      xhr.open('POST', 'GeneralController?btnAction=SearchSim', true);
+      xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
       xhr.onreadystatechange = function () {
           if (xhr.readyState == 4 && xhr.status == 200) {
               xmlDOM = xhr.responseXML;
-              callback(xmlDOM);
           }
       }
+      xhr.send();
       if (params != null) {
           xhr.send(params);
       } else {

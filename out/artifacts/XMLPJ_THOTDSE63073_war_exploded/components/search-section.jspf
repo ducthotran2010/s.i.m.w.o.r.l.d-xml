@@ -32,5 +32,6 @@
         <input name="priceLimit" type="range" min="0" max="100000000000"/>
 
     </label>
-    <input name="btnAction" value="Tìm" type="submit"/>
+    <input name="btnAction" value="SearchSim" type="hidden"/>
+    <button type="submit">Tìm kiếm</button>
 </form>

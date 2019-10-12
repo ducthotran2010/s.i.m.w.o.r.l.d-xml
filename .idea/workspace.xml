@@ -7,14 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33adb6b0-3c92-4c8e-adaa-0de8db9b0b2c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/XMLPJ_THOTDSE63073_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/XMLPJ_THOTDSE63073_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/navbar.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/navbar.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/controllers/general/GeneralController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/controllers/general/GeneralController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/dao/SimDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/dao/SimDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/MVOjs/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/MVOjs/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/b.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/search-section.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/search-section.jspf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/components/navbar.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/web/components/navbar.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/controllers/general/GeneralController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/controllers/general/GeneralController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/dao/SimDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/dao/SimDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/controllers/general/GeneralController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/controllers/general/GeneralController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/dao/NetworkOperatorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/dao/NetworkOperatorDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/dao/SimDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/dao/SimDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assests/js/MVOjs/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/js/MVOjs/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assests/js/b.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/js/b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assests/js/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/js/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/components/search-section.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/web/components/search-section.jspf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +35,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="XMLPJ_THOTDSE63073" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,7 +54,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1S3iQjWIKYOLejRXMpdaAAk46Wg" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -49,6 +69,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -62,11 +83,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.461">
+    <configuration name="TestSQLQueryUtil" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="test.SQLQueryUtilTest" />
+      <module name="XMLPJ_THOTDSE63073" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 8.5.461" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.461" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/XMLPJ_THOTDSE63073/" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="XMLPJ_THOTDSE63073:war exploded">
           <settings>
@@ -137,6 +165,10 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.TestSQLQueryUtil" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.461" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -148,7 +180,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570798665568</updated>
-      <workItem from="1570798669357" duration="10751000" />
+      <workItem from="1570798669357" duration="24125000" />
     </task>
     <servers />
   </component>

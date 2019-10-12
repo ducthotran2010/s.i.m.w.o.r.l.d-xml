@@ -1,3 +1,4 @@
+
 const INIT_OFFSET = 0;
 const SIZE = 50;
 
@@ -22,9 +23,10 @@ class Octopus {
 
     this.view.form.addEventListener('submit', event => {
       event.preventDefault();
-      const { startWith, notInclude, networkOperator, phone, priceLimit } = event.target.elements;
+      const { btnAction, startWith, notInclude, networkOperator, phone, priceLimit } = event.target.elements;
 
       const paramList = [
+        ParamResolver.getParamFromField({ name: 'btnAction', field: btnAction }),
         ParamResolver.getParamFromField({ name: 'phone', field: phone }),
         ParamResolver.getParamFromField({ name: 'priceLimit', field: priceLimit }),
         ParamResolver.getParamsFromCheckbox({ checkbox: startWith, name: 'startWith' }),
@@ -33,14 +35,22 @@ class Octopus {
       ];
       const params = paramList.filter(param => param.length !== 0).join('&');
 
-      console.log(params);
-      this.searchSim({});
+      this.searchSim({ params });
     });
   }
 
-  searchSim({ phoneNumber, networkOperator }) {
-    console.log('hi there');
-    // query({ });
+  searchSim({ params }) {
+    console.log(params);
+    
+    query({ 
+      method: 'POST',
+      url: constants.GENERAL_CONTROLLER,
+      params,
+      callback: (dom) => {
+        /* do things on view */
+        console.log(dom);
+      }
+     });
   }
 
 }

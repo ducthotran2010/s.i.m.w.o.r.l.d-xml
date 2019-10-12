@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="XMLPJ_THOTDSE63073:war exploded">
+  <artifact type="exploded-war" build-on-make="true" name="XMLPJ_THOTDSE63073:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="XMLPJ_THOTDSE63073/web/Web" />

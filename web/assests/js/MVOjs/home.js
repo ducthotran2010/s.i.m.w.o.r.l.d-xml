@@ -23,9 +23,10 @@ class Octopus {
 
     this.view.form.addEventListener('submit', event => {
       event.preventDefault();
-      const { startWith, notInclude, networkOperator, phone, priceLimit } = event.target.elements;
+      const { btnAction, startWith, notInclude, networkOperator, phone, priceLimit } = event.target.elements;
 
       const paramList = [
+        ParamResolver.getParamFromField({ name: 'btnAction', field: btnAction }),
         ParamResolver.getParamFromField({ name: 'phone', field: phone }),
         ParamResolver.getParamFromField({ name: 'priceLimit', field: priceLimit }),
         ParamResolver.getParamsFromCheckbox({ checkbox: startWith, name: 'startWith' }),
@@ -39,13 +40,15 @@ class Octopus {
   }
 
   searchSim({ params }) {
-    console.log('hi there');
+    console.log(params);
+    
     query({ 
       method: 'POST',
-      url: constants.SEARCH_SIM_ENDPOINT,
+      url: constants.GENERAL_CONTROLLER,
       params,
-      callback: () => {
+      callback: (dom) => {
         /* do things on view */
+        console.log(dom);
       }
      });
   }

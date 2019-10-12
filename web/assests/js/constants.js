@@ -1,6 +1,3 @@
 const constants = {
-  SEARCH_SIM_ENDPOINT: 'api/sim',
-
+  GENERAL_CONTROLLER: 'GeneralController',
 };
-
-export { constants };
