@@ -139,19 +139,17 @@ public class SimDAO implements Serializable {
     public String search(String phone, String priceLimit, String[] startWiths, String[] notIncludes, String[] networkOperators) throws SQLException, ClassNotFoundException {
         String result = "";
         try {
-            System.out.println("bef");
             String query = getSearchQuery(phone, priceLimit, startWiths, notIncludes, networkOperators);
-            System.out.println(query);
-            System.out.println("aft");
-            System.out.println(query);
             connection = DBUtil.createConnection();
             statement = connection.prepareStatement(query);
+
             int index = 0;
             index = setStatementForField(index, phone, "%", "%");
             index = setStatementForField(index, priceLimit, null, null);
             index = setStatementForFields(index, startWiths, null, "%");
             index = setStatementForFields(index, notIncludes, "%", "%");
             setStatementForFields(index, networkOperators, null, null);
+
             resultSet = statement.executeQuery();
             while (resultSet.next())  {
                 result += resultSet.getString(1);

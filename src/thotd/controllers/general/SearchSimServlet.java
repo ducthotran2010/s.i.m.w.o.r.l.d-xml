@@ -28,27 +28,18 @@ public class SearchSimServlet extends HttpServlet {
              * need optimize for dom
              */
 
-            String phone = (String) request.getParameter("phone");
-            String priceLimit = (String) request.getParameter("priceLimit");
-            String[] startWiths = (String[]) request.getParameterValues("startWith");
-            String[] notIncludes = (String[]) request.getParameterValues("notInclude");
-            String[] networkOperators = (String[]) request.getParameterValues("networkOperator");
-
-
-            System.out.println("Params");
-            System.out.println(phone);
-            System.out.println(priceLimit);
-            System.out.println(startWiths);
-            System.out.println(notIncludes);
-            System.out.println(networkOperators);
-            System.out.println("-----------");
+            String phone = request.getParameter("phone");
+            String priceLimit = request.getParameter("priceLimit");
+            String[] startWiths = request.getParameterValues("startWith");
+            String[] notIncludes = request.getParameterValues("notInclude");
+            String[] networkOperators = request.getParameterValues("networkOperator");
 
             SimDAO simDAO = new SimDAO();
             String result = simDAO.search(phone, priceLimit, startWiths, notIncludes, networkOperators);
             response.setStatus(200);
             response.getWriter().print(result);
         } catch (Exception e ) {
-            response.setStatus(400);
+            response.setStatus(500);
             log("Error at SearchSimController", e);
         }
     }

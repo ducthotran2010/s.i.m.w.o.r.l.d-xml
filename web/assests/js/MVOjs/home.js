@@ -17,6 +17,8 @@ class View {
     loaderId,
     formId,
     resultId,
+    resultMessageId,
+    resultDetailId,
     paginationLeftId,
     paginationRightId,
     paginationInputId,
@@ -27,15 +29,76 @@ class View {
     this.form = document.getElementById(formId);
     this.loader = document.getElementById(loaderId);
     this.result = document.getElementById(resultId);
+    this.resultMessage = document.getElementById(resultMessageId);
+    this.resultDetail = document.getElementById(resultDetailId);
     this.paginationLeft = document.getElementById(paginationLeftId);
     this.paginationRight = document.getElementById(paginationRightId);
     this.paginationInput = document.getElementById(paginationInputId);
-    this.paginationForm= document.getElementById(paginationFormId);
+    this.paginationForm = document.getElementById(paginationFormId);
     this.paginationMessage = document.getElementById(paginationMessageId);
     this.paginationContainer = document.getElementById(paginationContainerId);
     this.render();
   }
+
   render() { }
+
+  getTableHeadOfResultDetail() {
+    const thead = document.createElement('thead');
+    const tr = document.createElement('tr');
+
+    const ths = [
+      document.createElement('th'),
+      document.createElement('th'),
+      document.createElement('th'),
+      document.createElement('th'),
+      document.createElement('th'),
+    ];
+
+    ths[0].innerHTML = 'STT';
+    ths[1].innerHTML = 'Sim số đẹp';
+    ths[2].innerHTML = 'Giá bán';
+    ths[3].innerHTML = 'Nhà mạng';
+    ths[4].innerHTML = 'Nhãn';
+
+    ths.forEach(th => tr.appendChild(th));
+    thead.appendChild(tr);
+
+    return thead;
+  }
+
+  renderResultDetail({ result, offset }) {
+    const table = document.createElement('table');
+    const thead = this.getTableHeadOfResultDetail();
+    table.appendChild(thead);
+
+    const trs = result.map(({ phoneNumber, price, networkOperator, tag }, index) => {
+      const tr = document.createElement('tr');
+      const tds = [
+        document.createElement('td'),
+        document.createElement('td'),
+        document.createElement('td'),
+        document.createElement('td'),
+        document.createElement('td'),
+      ];
+
+
+      tds[0].innerHTML = offset + index + 1;
+      tds[1].innerHTML = phoneNumber;
+      tds[2].innerHTML = price.toLocaleString() + ' đ';
+      tds[3].innerHTML = networkOperator;
+      tds[4].innerHTML = tag;
+
+      tds.forEach(td => tr.appendChild(td));
+      return tr;
+    });
+
+    const tbody = document.createElement('tbody');
+    trs.forEach(tr => tbody.appendChild(tr));
+    table.appendChild(tbody);
+
+    this.resultDetail.innerHTML = '';
+    this.resultDetail.appendChild(table);
+  }
 }
 
 class Octopus {
@@ -45,6 +108,8 @@ class Octopus {
       formId: 'search-form',
       loaderId: 'loader',
       resultId: 'result-view',
+      resultMessageId: 'result-message',
+      resultDetailId: 'result-detail',
       paginationLeftId: 'pagination-left',
       paginationRightId: 'pagination-right',
       paginationInputId: 'pagination-input',
@@ -73,7 +138,7 @@ class Octopus {
       this.setModel({ offset, currentPage: nextPage });
       this.view.paginationInput.value = nextPage;
       this.checkPagination();
-    } 
+    }
   }
 
   handlePaginationLeft = () => {
@@ -168,16 +233,16 @@ class Octopus {
 
     for (let i = 0; i < SimWorld.length; i++) {
       const sim = SimWorld.item(i);
-      const PhoneNumber = sim.getElementsByTagName('PhoneNumber')[0].innerHTML;
-      const Price = sim.getElementsByTagName('Price')[0].innerHTML;
-      const NetworkOperator = sim.getElementsByTagName('NetworkOperator')[0].innerHTML;
-      const Tag = sim.getElementsByTagName('Tag')[0].innerHTML;
+      const phoneNumber = sim.getElementsByTagName('PhoneNumber')[0].innerHTML;
+      const price = sim.getElementsByTagName('Price')[0].innerHTML;
+      const networkOperator = sim.getElementsByTagName('NetworkOperator')[0].innerHTML;
+      const tag = sim.getElementsByTagName('Tag')[0].innerHTML;
 
       result.push({
-        PhoneNumber,
-        Price,
-        NetworkOperator,
-        Tag,
+        phoneNumber,
+        price: parseFloat(price, 10) * 1000,
+        networkOperator,
+        tag,
       })
     }
 
@@ -200,8 +265,11 @@ class Octopus {
   }
 
   updateViewResult() {
-    const { isLoading } = this.model;
+    const { isLoading, totalPage } = this.model;
 
+    /**
+     * Update class name
+     */
     let classValue = this.view.result.className;
     if (isLoading) {
       if (!classValue.includes('hidden')) {
@@ -210,10 +278,19 @@ class Octopus {
     } else if (classValue.includes('hidden')) {
       classValue = classValue.substring(0, classValue.length - 'hidden'.length - 1);
     }
-
     this.view.result.setAttribute('class', classValue);
 
-    console.log("------");
+    if (!isLoading) {
+      if (totalPage === 0) {
+        this.view.resultMessage.innerHTML = 'Không có dữ liệu';
+        this.view.resultDetail.innerHTML = '';
+      }
+      else {
+        const { result, offset } = this.model;
+        this.view.resultMessage.innerHTML = '';
+        this.view.renderResultDetail({ result: result.slice(offset, offset + SIZE), offset });
+      }
+    }
   }
 
   updateViewPagination() {
@@ -228,7 +305,7 @@ class Octopus {
       this.view.paginationContainer.className = "";
       this.view.paginationInput.value = currentPage;
       this.view.paginationInput.setAttribute('max', totalPage);
-      this.view.paginationMessage.innerHTML = `of ${totalPage} pages`
+      this.view.paginationMessage.innerHTML = `/ ${totalPage} trang`
       this.checkPagination();
     }
   }

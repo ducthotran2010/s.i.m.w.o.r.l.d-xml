@@ -19,15 +19,17 @@
 		<div id="loader" class="transition hidden">
 			Loading...
 		</div>
-		<div id="result-view" class="transition hidden">
-			Result
+		<div id="result-view" class="hidden">
+            <p id="result-message"></p>
+
+			<div id="result-detail"></div>
 
 			<div id="pagination-container" class="">
 				<button id="pagination-left">left</button>
 				<form id="pagination-form">
 					<input id="pagination-input" type="number" min="1"/>
 				</form>
-				<span id="pagination-infor">of 0 pages</span>
+				<span id="pagination-infor"></span>
 				<button id="pagination-right">right</button>
 			</div>
 		</div>
