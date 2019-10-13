@@ -2,7 +2,7 @@
 <%@ page pageEncoding="UTF-8" %>
 
 <form method="POST" action="GeneralController" id="look-up-form">
-    <input name="phoneNumber" placeholder="Nhập số cần tra cứu" type="number" value="${param.phoneNumber}"
+    <input name="phoneNumber" placeholder="Nhập số cần tra cứu" type="text" value="${param.phoneNumber}"
            pattern="\d{10}" autofocus/>
     <input name="btnAction" value="LookUpPhoneNumber" type="hidden"/>
     <button type="submit">Tra cứu ngay</button>

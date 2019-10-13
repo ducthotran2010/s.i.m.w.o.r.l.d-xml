@@ -2,7 +2,7 @@
 <%@ page pageEncoding="UTF-8" %>
 
 <form method="POST" action="GeneralController" id="search-form">
-    <input name="phone" placeholder="Nhập số cần tìm" type="number" pattern="\d{0,10}" autofocus/>
+    <input name="phone" placeholder="Nhập số cần tìm" type="text" pattern="\d{0,10}" autofocus/>
 
     <label>
         Bắt đầu

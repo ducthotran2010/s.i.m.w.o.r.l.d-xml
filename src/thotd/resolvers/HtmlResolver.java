@@ -28,9 +28,9 @@ public class HtmlResolver implements URIResolver, Serializable {
     public Source resolve(String href, String base) {
         if (href != null && StringUtil.isStringStartWithListString(DomainConstant.DOMAIN_LIST, href)) {
             try {
-                URLConnection connection = new URL(href).openConnection();
+                URLConnection urlConnection = new URL(href).openConnection();
                 StreamSource streamSource;
-                try (InputStream http = connection.getInputStream()) {
+                try (InputStream http = urlConnection.getInputStream()) {
                     streamSource = preProcessInputStream(http);
                 return streamSource;
                 }
@@ -78,6 +78,7 @@ public class HtmlResolver implements URIResolver, Serializable {
         httpString = httpString.replaceAll("&nbsp;", "");
         httpString = getTag(httpString, "body");
         httpString = removeTag(httpString, "script");
+        httpString = removeTag(httpString, "style");
         httpString = removeComment(httpString);
 
         XMLRefiner xmlRefiner = new XMLRefiner();

@@ -9,7 +9,6 @@
             <xs:sequence>
                 <xs:element name="PhoneNumber" type="PhoneNumberType"></xs:element>
                 <xs:element name="Price" type="xs:unsignedInt"></xs:element>
-                <xs:element name="Supplier" type="SupplierType"></xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -27,12 +26,6 @@
             <xs:enumeration value="Mobifone"/>
             <xs:enumeration value="Vietnamobile"/>
             <xs:enumeration value="Gmobile"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:simpleType name="SupplierType">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="Sodepami"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>

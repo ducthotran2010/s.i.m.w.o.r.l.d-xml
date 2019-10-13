@@ -21,7 +21,6 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="PhoneNumber" type="{http://ducthotran2010.github.io/xsd/sim}PhoneNumberType"/>
  *         &lt;element name="Price" type="{http://www.w3.org/2001/XMLSchema}unsignedInt"/>
- *         &lt;element name="Supplier" type="{http://ducthotran2010.github.io/xsd/sim}SupplierType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -33,8 +32,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "phoneNumber",
-    "price",
-    "supplier"
+    "price"
 })
 @XmlRootElement(name = "Sim", namespace = "http://ducthotran2010.github.io/xsd/sim")
 public class Sim {
@@ -44,9 +42,6 @@ public class Sim {
     @XmlElement(name = "Price", namespace = "http://ducthotran2010.github.io/xsd/sim")
     @XmlSchemaType(name = "unsignedInt")
     protected long price;
-    @XmlElement(name = "Supplier", namespace = "http://ducthotran2010.github.io/xsd/sim", required = true)
-    @XmlSchemaType(name = "string")
-    protected SupplierType supplier;
 
     /**
      * Gets the value of the phoneNumber property.
@@ -86,30 +81,6 @@ public class Sim {
      */
     public void setPrice(long value) {
         this.price = value;
-    }
-
-    /**
-     * Gets the value of the supplier property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SupplierType }
-     *     
-     */
-    public SupplierType getSupplier() {
-        return supplier;
-    }
-
-    /**
-     * Sets the value of the supplier property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SupplierType }
-     *     
-     */
-    public void setSupplier(SupplierType value) {
-        this.supplier = value;
     }
 
 }

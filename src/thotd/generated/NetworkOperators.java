@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
@@ -22,6 +23,8 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element ref="{http://ducthotran2010.github.io/xsd/network-operator}NetworkOperator" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
+ *       &lt;attribute name="supplier" type="{http://ducthotran2010.github.io/xsd/network-operators}SupplierType" />
+ *       &lt;attribute name="website" type="{http://www.w3.org/2001/XMLSchema}string" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -38,6 +41,10 @@ public class NetworkOperators {
 
     @XmlElement(name = "NetworkOperator")
     protected List<NetworkOperator> networkOperator;
+    @XmlAttribute(name = "supplier")
+    protected SupplierType supplier;
+    @XmlAttribute(name = "website")
+    protected String website;
 
     /**
      * Gets the value of the networkOperator property.
@@ -66,6 +73,54 @@ public class NetworkOperators {
             networkOperator = new ArrayList<NetworkOperator>();
         }
         return this.networkOperator;
+    }
+
+    /**
+     * Gets the value of the supplier property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link SupplierType }
+     *     
+     */
+    public SupplierType getSupplier() {
+        return supplier;
+    }
+
+    /**
+     * Sets the value of the supplier property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SupplierType }
+     *     
+     */
+    public void setSupplier(SupplierType value) {
+        this.supplier = value;
+    }
+
+    /**
+     * Gets the value of the website property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getWebsite() {
+        return website;
+    }
+
+    /**
+     * Sets the value of the website property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setWebsite(String value) {
+        this.website = value;
     }
 
 }

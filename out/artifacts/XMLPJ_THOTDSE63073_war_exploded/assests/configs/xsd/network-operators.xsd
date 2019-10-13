@@ -11,6 +11,15 @@
             <xs:sequence>
                 <xs:element ref="nw:NetworkOperator" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
+            <xs:attribute name="supplier" type="SupplierType"/>
+            <xs:attribute name="website" type="xs:string"/>
         </xs:complexType>
     </xs:element>
+
+    <xs:simpleType name="SupplierType">
+        <xs:restriction base="xs:string">
+            <!-- add new site in here -->
+            <xs:enumeration value="Sodepami"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

@@ -1,7 +1,6 @@
 package thotd.dao;
 
-import thotd.constants.LoginConstant;
-import thotd.generated.Order;
+import thotd.generated.orders.Order;
 import thotd.utils.DBUtil;
 
 import java.io.Serializable;
@@ -39,9 +38,6 @@ public class OrderDAO implements Serializable  {
             statement.setString(1, order.getName());
             statement.setString(2, order.getPhoneMask());
             statement.setString(3, order.getTimestamp());
-            System.out.println(order.getName());
-            System.out.println(order.getPhoneMask());
-            System.out.println(order.getTimestamp());
             result = statement.executeUpdate() > 0;
         } finally {
             closeConnection();

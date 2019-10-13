@@ -17,36 +17,32 @@
         <xsl:variable name="vietnamobile" select="'vietnamobile'"/>
         <xsl:variable name="gmobile" select="'gmobile'"/>
 
-        <xsl:variable name="tagNames" select="$table/tr/td[contains(@class, 'res-tab-hide')]/text()"/>
 
         <xsl:element name="NetworkOperators" xmlns="http://ducthotran2010.github.io/xsd/network-operators">
+            <xsl:attribute name="supplier">Sodepami</xsl:attribute>
+            <xsl:attribute name="website">https://sodepami.vn/</xsl:attribute>
             <xsl:call-template name="getNetworkOperatorNode">
                 <xsl:with-param name="table" select="$table"/>
-                <xsl:with-param name="tagNames" select="$tagNames"/>
                 <xsl:with-param name="networkOperatorName" select="$viettel"/>
                 <xsl:with-param name="networkOperatorDisplayName" select="'Viettel'"/>
             </xsl:call-template>
             <xsl:call-template name="getNetworkOperatorNode">
                 <xsl:with-param name="table" select="$table"/>
-                <xsl:with-param name="tagNames" select="$tagNames"/>
                 <xsl:with-param name="networkOperatorName" select="$vinaphone"/>
                 <xsl:with-param name="networkOperatorDisplayName" select="'Vinaphone'"/>
             </xsl:call-template>
             <xsl:call-template name="getNetworkOperatorNode">
                 <xsl:with-param name="table" select="$table"/>
-                <xsl:with-param name="tagNames" select="$tagNames"/>
                 <xsl:with-param name="networkOperatorName" select="$mobifone"/>
                 <xsl:with-param name="networkOperatorDisplayName" select="'Mobifone'"/>
             </xsl:call-template>
             <xsl:call-template name="getNetworkOperatorNode">
                 <xsl:with-param name="table" select="$table"/>
-                <xsl:with-param name="tagNames" select="$tagNames"/>
                 <xsl:with-param name="networkOperatorName" select="$vietnamobile"/>
                 <xsl:with-param name="networkOperatorDisplayName" select="'Vietnamobile'"/>
             </xsl:call-template>
             <xsl:call-template name="getNetworkOperatorNode">
                 <xsl:with-param name="table" select="$table"/>
-                <xsl:with-param name="tagNames" select="$tagNames"/>
                 <xsl:with-param name="networkOperatorName" select="$gmobile"/>
                 <xsl:with-param name="networkOperatorDisplayName" select="'Gmobile'"/>
             </xsl:call-template>
@@ -58,7 +54,6 @@
         <xsl:param name="networkOperatorName"/>
         <xsl:param name="networkOperatorDisplayName"/>
         <xsl:param name="table"/>
-        <xsl:param name="tagNames"/>
 
         <xsl:element name="NetworkOperator" xmlns="http://ducthotran2010.github.io/xsd/network-operator">
             <xsl:attribute name="name">
@@ -115,7 +110,6 @@
                         <xsl:with-param name="price" select="$price"/>
                     </xsl:call-template>
                 </xsl:element>
-                <xsl:element name="Supplier">Sodepami</xsl:element>
             </xsl:element>
         </xsl:for-each>
     </xsl:template>

@@ -6,7 +6,6 @@
     </root>
     <database id="2" parent="1" name="GoodsDB">
       <ObjectId>9</ObjectId>
-      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
     </database>
     <database id="3" parent="1" name="GuitarSuggestion">
       <ObjectId>6</ObjectId>
@@ -14,7 +13,6 @@
     </database>
     <database id="4" parent="1" name="OJTResult">
       <ObjectId>8</ObjectId>
-      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
     </database>
     <database id="5" parent="1" name="SimWorld">
       <ObjectId>7</ObjectId>
@@ -74,7 +72,7 @@
     </schema>
     <schema id="21" parent="5" name="dbo">
       <ObjectId>1</ObjectId>
-      <IntrospectionTimestamp>2019-10-13.01:04:26.467</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2019-10-13.11:29:00.363</IntrospectionTimestamp>
       <Current>1</Current>
     </schema>
     <schema id="22" parent="5" name="guest">
@@ -101,42 +99,47 @@
     <table id="27" parent="21" name="Sim">
       <ObjectId>1317579732</ObjectId>
       <CreatedTimestamp>2019-10-10.16:39:59.650</CreatedTimestamp>
-      <ModifiedTimestamp>2019-10-10.16:39:59.673</ModifiedTimestamp>
+      <ModifiedTimestamp>2019-10-13.11:29:00.053</ModifiedTimestamp>
     </table>
-    <table id="28" parent="21" name="Tag">
+    <table id="28" parent="21" name="Supplier">
+      <ObjectId>1845581613</ObjectId>
+      <CreatedTimestamp>2019-10-13.11:15:11.273</CreatedTimestamp>
+      <ModifiedTimestamp>2019-10-13.11:29:00.053</ModifiedTimestamp>
+    </table>
+    <table id="29" parent="21" name="Tag">
       <ObjectId>1285579618</ObjectId>
       <CreatedTimestamp>2019-10-10.16:36:20.473</CreatedTimestamp>
       <ModifiedTimestamp>2019-10-10.16:39:59.653</ModifiedTimestamp>
     </table>
-    <column id="29" parent="24" name="username">
+    <column id="30" parent="24" name="username">
       <Position>1</Position>
       <DataType>varchar(30 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="30" parent="24" name="password">
+    <column id="31" parent="24" name="password">
       <Position>2</Position>
       <DataType>varchar(30 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="31" parent="24" name="fullName">
+    <column id="32" parent="24" name="fullName">
       <Position>3</Position>
       <DataType>nvarchar(30 char)|0s</DataType>
     </column>
-    <column id="32" parent="24" name="isRemoved">
+    <column id="33" parent="24" name="isRemoved">
       <Position>4</Position>
       <DefaultConstraintName>DF__Account__isRemov__3A81B327</DefaultConstraintName>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <DataType>bit|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="33" parent="24" name="PK__Account__F3DBC573D0F6C1B8">
+    <index id="34" parent="24" name="PK__Account__F3DBC573D0F6C1B8">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>username</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="34" parent="24" name="PK__Account__F3DBC573D0F6C1B8">
+    <key id="35" parent="24" name="PK__Account__F3DBC573D0F6C1B8">
       <ObjectId>965578478</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2019-10-05.10:49:55.360</CreatedTimestamp>
@@ -145,35 +148,35 @@
       <UnderlyingIndexName>PK__Account__F3DBC573D0F6C1B8</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <default id="35" parent="24" name="DF__Account__isRemov__3A81B327">
+    <default id="36" parent="24" name="DF__Account__isRemov__3A81B327">
       <ObjectId>981578535</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <ModifiedTimestamp>2019-10-05.11:04:18.677</ModifiedTimestamp>
       <ColNames>isRemoved</ColNames>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </default>
-    <column id="36" parent="25" name="id">
+    <column id="37" parent="25" name="id">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="37" parent="25" name="name">
+    <column id="38" parent="25" name="name">
       <Position>2</Position>
       <DataType>varchar(30 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="38" parent="25" name="NetworkOperator_pk">
+    <index id="39" parent="25" name="NetworkOperator_pk">
       <Position>2</Position>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="39" parent="25" name="NetworkOperator_name_uindex">
+    <index id="40" parent="25" name="NetworkOperator_name_uindex">
       <Position>3</Position>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="40" parent="25" name="NetworkOperator_pk">
+    <key id="41" parent="25" name="NetworkOperator_pk">
       <ObjectId>1221579390</ObjectId>
       <CreatedTimestamp>2019-10-09.13:28:13.047</CreatedTimestamp>
       <ModifiedTimestamp>2019-10-09.13:28:13.047</ModifiedTimestamp>
@@ -181,44 +184,44 @@
       <UnderlyingIndexName>NetworkOperator_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="41" parent="26" name="id">
+    <column id="42" parent="26" name="id">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="42" parent="26" name="name">
+    <column id="43" parent="26" name="name">
       <Position>2</Position>
       <DataType>nvarchar(30 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="43" parent="26" name="phoneMask">
+    <column id="44" parent="26" name="phoneMask">
       <Position>3</Position>
       <DataType>varchar(10 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="44" parent="26" name="timestamp">
+    <column id="45" parent="26" name="timestamp">
       <Position>4</Position>
       <DataType>nvarchar(30 char)|0s</DataType>
     </column>
-    <index id="45" parent="26" name="Order_id_uindex">
+    <index id="46" parent="26" name="Order_id_uindex">
       <Position>2</Position>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="46" parent="26" name="Order_pk">
+    <index id="47" parent="26" name="Order_pk">
       <Position>3</Position>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="47" parent="26" name="Order_phoneMask_name_timestamp_uindex">
+    <index id="48" parent="26" name="Order_phoneMask_name_timestamp_uindex">
       <Position>4</Position>
       <ColNames>phoneMask
 name
 timestamp</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="48" parent="26" name="Order_pk">
+    <key id="49" parent="26" name="Order_pk">
       <ObjectId>1541580530</ObjectId>
       <CreatedTimestamp>2019-10-13.00:58:14.583</CreatedTimestamp>
       <ModifiedTimestamp>2019-10-13.00:58:14.583</ModifiedTimestamp>
@@ -226,37 +229,41 @@ timestamp</ColNames>
       <UnderlyingIndexName>Order_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="49" parent="27" name="phone">
+    <column id="50" parent="27" name="phone">
       <Position>1</Position>
       <DataType>varchar(10 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="50" parent="27" name="price">
+    <column id="51" parent="27" name="price">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="51" parent="27" name="networkOperatorId">
+    <column id="52" parent="27" name="networkOperatorId">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="27" name="tagId">
+    <column id="53" parent="27" name="tagId">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="53" parent="27" name="Sim_phone_uindex">
+    <column id="54" parent="27" name="supplierId">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <index id="55" parent="27" name="Sim_phone_uindex">
       <Position>2</Position>
       <ColNames>phone</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="54" parent="27" name="Sim_pk">
+    <index id="56" parent="27" name="Sim_pk">
       <Position>3</Position>
       <ColNames>phone</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="55" parent="27" name="Sim_pk">
+    <key id="57" parent="27" name="Sim_pk">
       <ObjectId>1365579903</ObjectId>
       <CreatedTimestamp>2019-10-10.16:39:59.670</CreatedTimestamp>
       <ModifiedTimestamp>2019-10-10.16:39:59.670</ModifiedTimestamp>
@@ -264,7 +271,7 @@ timestamp</ColNames>
       <UnderlyingIndexName>Sim_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="56" parent="27" name="Sim_NetworkOperator_id_fk">
+    <foreign-key id="58" parent="27" name="Sim_NetworkOperator_id_fk">
       <ObjectId>1333579789</ObjectId>
       <CreatedTimestamp>2019-10-10.16:39:59.653</CreatedTimestamp>
       <ModifiedTimestamp>2019-10-10.16:39:59.653</ModifiedTimestamp>
@@ -275,7 +282,7 @@ timestamp</ColNames>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="57" parent="27" name="Sim_Tag_id_fk">
+    <foreign-key id="59" parent="27" name="Sim_Tag_id_fk">
       <ObjectId>1349579846</ObjectId>
       <CreatedTimestamp>2019-10-10.16:39:59.653</CreatedTimestamp>
       <ModifiedTimestamp>2019-10-10.16:39:59.653</ModifiedTimestamp>
@@ -286,28 +293,82 @@ timestamp</ColNames>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="58" parent="28" name="id">
+    <foreign-key id="60" parent="27" name="Sim_Supplier_id_fk">
+      <ObjectId>1877581727</ObjectId>
+      <CreatedTimestamp>2019-10-13.11:29:00.053</CreatedTimestamp>
+      <ModifiedTimestamp>2019-10-13.11:29:00.053</ModifiedTimestamp>
+      <ColNames>supplierId</ColNames>
+      <RefTableId>1845581613</RefTableId>
+      <RefTableName>Supplier</RefTableName>
+      <RefKeyName>Supplier_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="61" parent="28" name="id">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="59" parent="28" name="tagName">
+    <column id="62" parent="28" name="name">
       <Position>2</Position>
       <DataType>nvarchar(30 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="60" parent="28" name="Tag_pk">
+    <column id="63" parent="28" name="website">
+      <Position>3</Position>
+      <DataType>varchar(2048 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="64" parent="28" name="Supplier_id_uindex">
       <Position>2</Position>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="61" parent="28" name="Tag_tagName_uindex">
+    <index id="65" parent="28" name="Supplier_name_uindex">
+      <Position>3</Position>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="66" parent="28" name="Supplier_website_uindex">
+      <Position>4</Position>
+      <ColNames>website</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="67" parent="28" name="Supplier_pk">
+      <Position>5</Position>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="68" parent="28" name="Supplier_pk">
+      <ObjectId>1861581670</ObjectId>
+      <CreatedTimestamp>2019-10-13.11:15:11.320</CreatedTimestamp>
+      <ModifiedTimestamp>2019-10-13.11:15:11.320</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>Supplier_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="69" parent="29" name="id">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="29" name="tagName">
+      <Position>2</Position>
+      <DataType>nvarchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="71" parent="29" name="Tag_pk">
+      <Position>2</Position>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="72" parent="29" name="Tag_tagName_uindex">
       <Position>3</Position>
       <ColNames>tagName</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="62" parent="28" name="Tag_pk">
+    <key id="73" parent="29" name="Tag_pk">
       <ObjectId>1301579675</ObjectId>
       <CreatedTimestamp>2019-10-10.16:36:20.477</CreatedTimestamp>
       <ModifiedTimestamp>2019-10-10.16:36:20.477</ModifiedTimestamp>

@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "SupplierType", namespace = "http://ducthotran2010.github.io/xsd/sim")
+@XmlType(name = "SupplierType", namespace = "http://ducthotran2010.github.io/xsd/network-operators")
 @XmlEnum
 public enum SupplierType {
 

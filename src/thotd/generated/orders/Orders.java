@@ -1,5 +1,5 @@
 
-package thotd.generated;
+package thotd.generated.orders;
 
 import java.util.ArrayList;
 import java.util.List;

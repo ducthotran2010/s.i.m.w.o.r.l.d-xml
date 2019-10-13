@@ -29,8 +29,9 @@ public class CrawlOrderServlet extends HttpServlet {
         try {
             String path = request.getServletContext().getRealPath("/");
             String xmlPath = path + PathConstant.CONFIG_ORDERS_XML;
-            String xslPath = path + PathConstant.CONFIG_ORDERS_XSL_SIMSOVIETNAM;
+            String xslPath = path + PathConstant.CONFIG_ORDERS_XSL_KHOSIM;
             DOMResult domResult = Crawler.doCrawlForSingleSite(xmlPath, xslPath);
+
 
             /**
              * Save to file in development stage
@@ -42,10 +43,10 @@ public class CrawlOrderServlet extends HttpServlet {
             /*
              */
 
-            System.out.println("gif z ba noi");
             /**
              * Save to database
              */
+            System.out.println("hi there...");
             DataResolver dataResolver = new DataResolver();
             dataResolver.saveOrderDomResultToDatabase(domResult);
 

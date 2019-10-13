@@ -1,6 +1,5 @@
 package thotd.dao;
 
-import thotd.generated.NetworkOperators;
 import thotd.generated.Sim;
 import thotd.utils.DBUtil;
 import thotd.utils.SQLQueryUtil;
@@ -31,17 +30,18 @@ public class SimDAO implements Serializable {
     }
 
 
-    public boolean insert(Sim sim, int networkOperatorId, int tagId) throws SQLException, ClassNotFoundException {
+    public boolean insert(Sim sim, int networkOperatorId, int tagId, int supplierId) throws SQLException, ClassNotFoundException {
         boolean result = false;
         try {
             connection = DBUtil.createConnection();
-            String query = "INSERT INTO Sim (phone, price, networkOperatorId, tagId) VALUES (?, ?, ?, ?) ";
+            String query = "INSERT INTO Sim (phone, price, networkOperatorId, tagId, supplierId) VALUES (?, ?, ?, ?, ?) ";
 
             statement = connection.prepareStatement(query);
             statement.setString(1, sim.getPhoneNumber());
             statement.setLong(2, sim.getPrice());
             statement.setInt(3, networkOperatorId);
             statement.setInt(4, tagId);
+            statement.setInt(5, supplierId);
             result = statement.executeUpdate() > 0;
         } finally {
             closeConnection();
@@ -50,18 +50,19 @@ public class SimDAO implements Serializable {
         return result;
     }
 
-    public boolean update(Sim sim, Integer networkOperatorId, Integer tagId) throws SQLException, ClassNotFoundException {
+    public boolean update(Sim sim, Integer networkOperatorId, Integer tagId, int supplierId) throws SQLException, ClassNotFoundException {
         boolean result = false;
 
         try {
             connection = DBUtil.createConnection();
-            String query = "UPDATE Sim SET price = ?, networkOperatorId = ?, tagId = ? WHERE phone = ?";
+            String query = "UPDATE Sim SET price = ?, networkOperatorId = ?, tagId = ?, supplierId = ? WHERE phone = ?";
 
             statement = connection.prepareStatement(query);
             statement.setLong(1, sim.getPrice());
             statement.setInt(2, networkOperatorId);
             statement.setInt(3, tagId);
-            statement.setString(4, sim.getPhoneNumber());
+            statement.setInt(4, supplierId);
+            statement.setString(5, sim.getPhoneNumber());
             result = statement.executeUpdate() > 0;
         } finally {
             closeConnection();

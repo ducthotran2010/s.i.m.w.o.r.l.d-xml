@@ -1,11 +1,9 @@
 package thotd.resolvers;
 
-import com.sun.tools.corba.se.idl.constExpr.Or;
-import thotd.dao.NetworkOperatorDAO;
-import thotd.dao.OrderDAO;
-import thotd.dao.SimDAO;
-import thotd.dao.TagDAO;
+import thotd.dao.*;
 import thotd.generated.*;
+import thotd.generated.orders.Order;
+import thotd.generated.orders.Orders;
 import thotd.utils.JAXBUtil;
 
 import javax.xml.bind.JAXBException;
@@ -13,23 +11,38 @@ import javax.xml.transform.dom.DOMResult;
 import java.io.Serializable;
 
 public class DataResolver implements Serializable {
-    NetworkOperatorDAO networkOperatorDAO;
-    TagDAO tagDAO;
-    SimDAO simDAO;
+    private NetworkOperatorDAO networkOperatorDAO;
+    private TagDAO tagDAO;
+    private SimDAO simDAO;
+    private SupplierDAO supplierDAO;
 
     public DataResolver() {
         networkOperatorDAO = new NetworkOperatorDAO();
         tagDAO = new TagDAO();
         simDAO = new SimDAO();
+        supplierDAO = new SupplierDAO();
     }
 
     public void saveDomResultToDatabase(DOMResult domResult) throws JAXBException {
+        Integer supplierId = null;
         String networkOperatorName;
         Integer networkOperatorId;
         String tagName;
         Integer tagId;
         NetworkOperators networkOperators = new NetworkOperators();
         networkOperators = (NetworkOperators) JAXBUtil.unmarshal(networkOperators.getClass(), domResult.getNode());
+
+        String supplier = networkOperators.getSupplier().value();
+        String website = networkOperators.getWebsite();
+
+        try {
+            supplierDAO.insert(supplier, website);
+        } catch (Exception e) {}
+        supplierId = handleGettingIdByNameGeneral(supplierDAO, supplier);
+
+        if (supplierId == null) {
+            return;
+        }
 
         for (NetworkOperator networkOperator : networkOperators.getNetworkOperator()) {
             networkOperatorName = networkOperator.getName().value();
@@ -50,19 +63,19 @@ public class DataResolver implements Serializable {
                 }
 
                 for (Sim sim : tag.getSim()) {
-                    handleInsertSim(sim, networkOperatorId, tagId);
+                    handleInsertSim(sim, networkOperatorId, tagId, supplierId);
                 }
             }
         }
     }
 
-    private boolean handleInsertSim(Sim sim, int networkOperatorId, int tagId) {
+    private boolean handleInsertSim(Sim sim, int networkOperatorId, int tagId, int supplierId) {
         boolean result = false;
         try {
-            result = simDAO.insert(sim, networkOperatorId, tagId);
+            result = simDAO.insert(sim, networkOperatorId, tagId, supplierId);
         } catch (Exception e) {
             try {
-                result = simDAO.update(sim, networkOperatorId, tagId);
+                result = simDAO.update(sim, networkOperatorId, tagId, supplierId);
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
@@ -99,6 +112,7 @@ public class DataResolver implements Serializable {
             result = (boolean) object.getClass().getMethod("insert", Order.class).invoke(object, args);
         } catch (Exception e) {
             /* do nothing */
+            e.printStackTrace();
         }
 
         return result;
@@ -108,8 +122,10 @@ public class DataResolver implements Serializable {
     public void saveOrderDomResultToDatabase(DOMResult domResult) throws JAXBException {
         Orders orders = new Orders();
         orders = (Orders) JAXBUtil.unmarshal(orders.getClass(), domResult.getNode());
+        System.out.println("after unmarshal");
         OrderDAO orderDAO = new OrderDAO();
         for (Order order : orders.getOrder()) {
+            System.out.println("order: "  + order.getName());
             handleInsertOrder(orderDAO, order);
         }
 

@@ -13,7 +13,7 @@ public class OrderXMLGenerator {
         for (String schema : PathConstant.CONFIG_ORDERS_SCHEMAS) {
             System.out.println("Starting to generate file: " + schema);
             try {
-                JAXBUtil.generateClassFromSchema(schema);
+                JAXBUtil.generateClassFromSchema(schema, ".orders");
                 System.out.println("Object generated");
             } catch (IOException e) {
                 e.printStackTrace();

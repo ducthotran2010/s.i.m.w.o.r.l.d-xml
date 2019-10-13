@@ -13,7 +13,7 @@ public class XMLGenerator {
         for (String schema : PathConstant.CONFIG_SCHEMAS) {
             System.out.println("Starting to generate file: " + schema);
             try {
-                JAXBUtil.generateClassFromSchema(schema);
+                JAXBUtil.generateClassFromSchema(schema, "");
                 System.out.println("Object generated");
             } catch (IOException e) {
                 e.printStackTrace();

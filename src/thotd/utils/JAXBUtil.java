@@ -15,9 +15,9 @@ import java.io.*;
 
 public class JAXBUtil implements Serializable {
 
-    public static void generateClassFromSchema(String filePath) throws IOException {
+    public static void generateClassFromSchema(String filePath, String location) throws IOException {
         SchemaCompiler schemaCompiler = XJC.createSchemaCompiler();
-        schemaCompiler.forcePackageName(PathConstant.PACKED_GENERATED_NAME);
+        schemaCompiler.forcePackageName(PathConstant.PACKED_GENERATED_NAME + location);
 
         File schema = new File(filePath);
         InputSource inputSource = new InputSource(schema.toURI().toString());

@@ -1,17 +1,12 @@
 package test;
 
-import thotd.constants.PathConstant;
 import thotd.dao.NetworkOperatorDAO;
 import thotd.dao.SimDAO;
 import thotd.dao.TagDAO;
 import thotd.generated.Sim;
-import thotd.generated.SupplierType;
 import thotd.resolvers.DataResolver;
-import thotd.utils.JAXBUtil;
 
-import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.sql.SQLException;
 
 public class DataResolverTest {
 

@@ -17,8 +17,24 @@ public class PathConstant {
             "web/assests/configs/xsd/network-operators.xsd"
     );
 
+    /**
+     * Order configs
+     *
+     * Work for with:
+     *  - Simsovietnam
+     *
+     *  Got 403 with:
+     *  - Giaosimnhanh
+     */
     public static final String CONFIG_ORDERS_XML= "assests/configs/xml/orders.xml";
     public static final String CONFIG_ORDERS_XSL_SIMSOVIETNAM = "assests/configs/xsl/orders/simsovietnam.xsl";
+    public static final String CONFIG_ORDERS_XSL_GIAOSIMNHANH = "assests/configs/xsl/orders/giaosimnhanh.xsl";
+    public static final String CONFIG_ORDERS_XSL_KHOSIM = "assests/configs/xsl/orders/khosim.xsl";
+    public static final List<String> CONFIG_ORDERS_XSL = Arrays.asList(
+            CONFIG_ORDERS_XSL_SIMSOVIETNAM,
+            CONFIG_ORDERS_XSL_KHOSIM
+            // CONFIG_ORDERS_XSL_GIAOSIMNHANH
+    );
 
     public static final List<String> CONFIG_ORDERS_SCHEMAS = Arrays.asList(
             "web/assests/configs/xsd/orders/order.xsd",
