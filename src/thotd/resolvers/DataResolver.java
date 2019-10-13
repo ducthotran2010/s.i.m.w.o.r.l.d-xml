@@ -1,12 +1,11 @@
 package thotd.resolvers;
 
+import com.sun.tools.corba.se.idl.constExpr.Or;
 import thotd.dao.NetworkOperatorDAO;
+import thotd.dao.OrderDAO;
 import thotd.dao.SimDAO;
 import thotd.dao.TagDAO;
-import thotd.generated.NetworkOperator;
-import thotd.generated.NetworkOperators;
-import thotd.generated.Sim;
-import thotd.generated.Tag;
+import thotd.generated.*;
 import thotd.utils.JAXBUtil;
 
 import javax.xml.bind.JAXBException;
@@ -93,4 +92,26 @@ public class DataResolver implements Serializable {
         return null;
     }
 
+
+    private boolean handleInsertOrder(Object object, Object... args) {
+        boolean result = false;
+        try {
+            result = (boolean) object.getClass().getMethod("insert", Order.class).invoke(object, args);
+        } catch (Exception e) {
+            /* do nothing */
+        }
+
+        return result;
+    }
+
+
+    public void saveOrderDomResultToDatabase(DOMResult domResult) throws JAXBException {
+        Orders orders = new Orders();
+        orders = (Orders) JAXBUtil.unmarshal(orders.getClass(), domResult.getNode());
+        OrderDAO orderDAO = new OrderDAO();
+        for (Order order : orders.getOrder()) {
+            handleInsertOrder(orderDAO, order);
+        }
+
+    }
 }

@@ -7,12 +7,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33adb6b0-3c92-4c8e-adaa-0de8db9b0b2c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/XMLPJ_THOTDSE63073_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/XMLPJ_THOTDSE63073_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XMLPJ_THOTDSE63073.iml" beforeDir="false" afterPath="$PROJECT_DIR$/XMLPJ_THOTDSE63073.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/constants/DomainConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/constants/DomainConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/constants/PathConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/constants/PathConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/controllers/admin/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/controllers/admin/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/controllers/admin/CrawlServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/controllers/admin/CrawlServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/controllers/general/GeneralController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/controllers/general/GeneralController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/controllers/general/SearchSimServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/controllers/general/SearchSimServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/dao/SimDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/dao/SimDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/generated/ObjectFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/generated/ObjectFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/generated/package-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/generated/package-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/resolvers/Crawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/resolvers/Crawler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/resolvers/DataResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/resolvers/DataResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/resolvers/HtmlResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/resolvers/HtmlResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/configs/xml/sodepami.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/configs/xsl/sodepami.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/configs/xsl/sodepami.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/MVOjs/a.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/MVOjs/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/MVOjs/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/navbar.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/navbar.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/search-section.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/search-section.jspf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/constants/DomainConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/constants/DomainConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/constants/PathConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/constants/PathConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/controllers/admin/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/controllers/admin/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/controllers/admin/CrawlServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/controllers/admin/CrawlServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/controllers/general/GeneralController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/controllers/general/GeneralController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/controllers/general/SearchSimServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/controllers/general/SearchSimServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/dao/SimDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/dao/SimDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/generated/ObjectFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/generated/ObjectFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/generated/package-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/generated/package-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/resolvers/Crawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/resolvers/Crawler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/resolvers/DataResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/resolvers/DataResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/resolvers/HtmlResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/resolvers/HtmlResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/constants/DomainConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/constants/DomainConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/constants/PathConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/constants/PathConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/controllers/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/controllers/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/controllers/admin/CrawlServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/controllers/admin/CrawlServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/controllers/general/GeneralController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/controllers/general/GeneralController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/thotd/controllers/general/SearchSimServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/controllers/general/SearchSimServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/thotd/dao/SimDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/dao/SimDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/generated/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/generated/ObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/generated/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/generated/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/resolvers/Crawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/resolvers/Crawler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/resolvers/DataResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/resolvers/DataResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/resolvers/HtmlResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/resolvers/HtmlResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assests/configs/xml/sodepami.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/configs/xml/network-operators.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assests/configs/xsl/sodepami.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/configs/xsl/sodepami.xsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/assests/js/MVOjs/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/js/MVOjs/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/components/navbar.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/web/components/navbar.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/components/search-section.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/web/components/search-section.jspf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +82,23 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SimWorld@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SimWorld@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="SimWorld: database" type="ccb7ac2a:MsImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SimWorld@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="SimWorld: database" type="ccb7ac2a:MsImplModel$Database" />
+        <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FavoritesManager">
@@ -41,12 +107,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/web/look-up.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -61,6 +131,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlserver" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -73,10 +144,24 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/assests/configs/xsd/orders" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/assests/configs/xml" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="thotd.generator" />
+      <recent name="thotd.controllers.admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/assests/configs/xsd/orders" />
+      <recent name="$PROJECT_DIR$/web/components" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -91,6 +176,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.461">
+    <configuration name="Order XML Generator" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="thotd.generator.OrderXMLGenerator" />
+      <module name="XMLPJ_THOTDSE63073" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestSQLQueryUtil" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="test.SQLQueryUtilTest" />
       <module name="XMLPJ_THOTDSE63073" />
@@ -173,9 +265,30 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Order XML Generator" />
       <item itemvalue="Application.TestSQLQueryUtil" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.461" />
     </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@47d05822" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@47d05822" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4395d097" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -187,7 +300,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570798665568</updated>
-      <workItem from="1570798669357" duration="31309000" />
+      <workItem from="1570798669357" duration="48883000" />
     </task>
     <servers />
   </component>

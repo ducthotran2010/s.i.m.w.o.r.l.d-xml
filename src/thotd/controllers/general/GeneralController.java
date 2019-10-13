@@ -9,6 +9,7 @@ import java.io.IOException;
 public class GeneralController extends HttpServlet {
     private static final String LOGIN_PAGE = "LoginServlet";
     private static final String SEARCH_SIM_PAGE = "SearchSimServlet";
+    private static final String LOOK_UP_PAGE = "LookUpServlet";
     private static final String ERROR_PAGE = "error.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -22,6 +23,8 @@ public class GeneralController extends HttpServlet {
                 url = LOGIN_PAGE;
             } else if ("SearchSim".equals(btnAction)) {
                 url = SEARCH_SIM_PAGE;
+            } else if ("LookUpPhoneNumber".equals(btnAction)) {
+                url = LOOK_UP_PAGE;
             } else {
                 request.setAttribute("Error", "Your action is not supported");
             }

@@ -31,7 +31,7 @@ public class CrawlServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String url = ADMIN_PAGE;
+        String url = ERROR_PAGE;
 
         int totalPage = 1;
         String strTotalPage = request.getParameter("totalPage");
@@ -47,9 +47,9 @@ public class CrawlServlet extends HttpServlet {
             }
 
             String path = request.getServletContext().getRealPath("/");
-            String xmlPath = path + PathConstant.CONFIG_XML_SODEPAMI;
+            String xmlPath = path + PathConstant.CONFIG_XML;
             String xlsPath = path + PathConstant.CONFIG_XSL_SODEPAMI;
-            ArrayList<DOMResult> domResults = (ArrayList<DOMResult>) Crawler.doCrawl(xmlPath, xlsPath, totalPage);
+            ArrayList<DOMResult> domResults = (ArrayList<DOMResult>) Crawler.doCrawlForPaginatedSite(xmlPath, xlsPath, totalPage);
 
             /**
              * Save to file in development stage
@@ -69,8 +69,8 @@ public class CrawlServlet extends HttpServlet {
                 dataResolver.saveDomResultToDatabase(domResult);
             }
 
+            url = ADMIN_PAGE;
         } catch (Exception e) {
-            url = ERROR_PAGE;
             request.setAttribute("Error", "Could not crawl data");
             log("Error at CrawlServlet", e);
         } finally {

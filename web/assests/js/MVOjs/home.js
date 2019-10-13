@@ -66,7 +66,7 @@ class View {
     return thead;
   }
 
-  renderResultDetail({ result, offset }) {
+  renderResultDetail({ dom, result, offset }) {
     const table = document.createElement('table');
     const thead = this.getTableHeadOfResultDetail();
     table.appendChild(thead);

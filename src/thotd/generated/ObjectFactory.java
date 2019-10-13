@@ -30,35 +30,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link NetworkOperators }
+     * Create an instance of {@link Orders }
      * 
      */
-    public NetworkOperators createNetworkOperators() {
-        return new NetworkOperators();
+    public Orders createOrders() {
+        return new Orders();
     }
 
     /**
-     * Create an instance of {@link NetworkOperator }
+     * Create an instance of {@link Order }
      * 
      */
-    public NetworkOperator createNetworkOperator() {
-        return new NetworkOperator();
-    }
-
-    /**
-     * Create an instance of {@link Tag }
-     * 
-     */
-    public Tag createTag() {
-        return new Tag();
-    }
-
-    /**
-     * Create an instance of {@link Sim }
-     * 
-     */
-    public Sim createSim() {
-        return new Sim();
+    public Order createOrder() {
+        return new Order();
     }
 
 }

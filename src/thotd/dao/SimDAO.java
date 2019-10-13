@@ -72,7 +72,7 @@ public class SimDAO implements Serializable {
 
 
     private String getSearchQuery(String phone, String priceLimit, String[] startWiths, String[] notIncludes, String[] networkOperators) {
-        String selectClause = "SELECT phone as PhoneNumber, price as Price, name as NetworkOperator, tagName as Tag FROM [Sim] AS S JOIN [NetworkOperator] AS N ON S.networkOperatorId = N.id JOIN [Tag] AS T ON S.tagId = T.id WHERE ";
+        String selectClause = "SELECT phone as PhoneNumber, price as Price, name as NetworkOperator, tagName as Tag FROM [Sim] AS S JOIN [NetworkOperator] AS N ON S.networkOperatorId = N.id JOIN [Tag] AS T ON S.tagId = T.id ";
 
         int[] lengths = {
                 phone == null ? 0 : 1,
@@ -97,6 +97,9 @@ public class SimDAO implements Serializable {
             }
         }
         String conditionClause = String.join(" AND ", filteredConditions);
+        if (conditionClause.trim().length() > 0) {
+            conditionClause = " WHERE " + conditionClause;
+        }
         String formatClause = " FOR XML PATH('Sim'), ROOT('SimWorld')";
         String result = selectClause + conditionClause + formatClause;
 

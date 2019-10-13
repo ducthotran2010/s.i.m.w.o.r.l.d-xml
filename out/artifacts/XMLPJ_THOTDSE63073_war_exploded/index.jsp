@@ -8,11 +8,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Trang chủ | Thế Giới Thẻ SIM</title>
-	<link rel="icon" href="${pageContext.request.contextPath}/assests/image/logo.png"/>
-	<link href="${pageContext.request.contextPath}/assests/css/global.css" rel="stylesheet" type="text/css"/>
-</head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Trang chủ | Thế Giới Thẻ SIM</title>
+		<link rel="icon" href="${pageContext.request.contextPath}/assests/image/logo.png"/>
+		<link href="${pageContext.request.contextPath}/assests/css/global.css" rel="stylesheet" type="text/css"/>
+	</head>
 	<body>
 		<%@include file="components/navbar.jspf" %>
 		<%@include file="components/search-section.jspf" %>
@@ -31,7 +31,7 @@
 				</form>
 				<span id="pagination-infor"></span>
 				<button id="pagination-right">right</button>
-			</div>
+		</div>
 		</div>
 
 		<script>document.getElementById('nav-home').classList.add('active');</script>

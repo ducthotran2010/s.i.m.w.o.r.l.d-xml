@@ -40,7 +40,7 @@ public class SearchSimServlet extends HttpServlet {
             response.getWriter().print(result);
         } catch (Exception e ) {
             response.setStatus(500);
-            log("Error at SearchSimController", e);
+            log("Error at SearchSimServlet", e);
         }
     }
 

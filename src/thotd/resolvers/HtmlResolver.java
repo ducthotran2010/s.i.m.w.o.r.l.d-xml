@@ -53,12 +53,13 @@ public class HtmlResolver implements URIResolver, Serializable {
 
     /**
      * Get the first matched {@code tag} in {@code source}
+     * if not match return the original {@code source}
      *
      * @param      source  the http source as a string.
      * @param      tagName  the initial capacity.
      */
     private String getTag(String source, String tagName) {
-        String result = null;
+        String result = source;
         String expression = "<" + tagName + ".*?</" + tagName + ">";
         Pattern pattern = Pattern.compile(expression);
         Matcher matcher = pattern.matcher(source);
@@ -71,7 +72,7 @@ public class HtmlResolver implements URIResolver, Serializable {
     }
 
     private StreamSource preProcessInputStream(InputStream http) throws IOException {
-        String httpString = StringUtil.parseInputStreamToString(http);
+        String httpString = "<html>" + StringUtil.parseInputStreamToString(http) + "</html>";
 
         httpString = httpString.replaceAll("\n", "");
         httpString = httpString.replaceAll("&nbsp;", "");

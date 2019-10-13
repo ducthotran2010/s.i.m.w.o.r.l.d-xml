@@ -2,7 +2,6 @@
 
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:xh="http://www.w3.org/1999/xhtml"
                 xmlns:config="http://ducthotran2010.github.io/xml/config"
                 xmlns="http://ducthotran2010.github.io/xsd/network-operators">
     <xsl:output method="xml" omit-xml-declaration="yes" indent="yes"/>

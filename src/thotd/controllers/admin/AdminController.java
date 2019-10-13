@@ -8,6 +8,7 @@ import java.io.IOException;
 
 public class AdminController extends HttpServlet {
     private static final String CRAWL_PAGE = "CrawlServlet";
+    private static final String CRAWL_ORDER_PAGE = "CrawlOrderServlet";
     private static final String ERROR_PAGE = "error.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -19,15 +20,17 @@ public class AdminController extends HttpServlet {
 
             if ("Crawl".equals(btnAction)) {
                 url = CRAWL_PAGE;
+            } else if ("CrawlOrder".equals(btnAction)) {
+                url = CRAWL_ORDER_PAGE;
             } else {
                 request.setAttribute("Error", "Your action is not supported");
             }
-
         } catch (Exception e) {
             log("Error at AdminController", e);
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }
+
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -5,6 +5,7 @@ import org.w3c.dom.Node;
 import thotd.utils.DocumentUtil;
 
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMResult;
@@ -15,8 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Crawler implements Serializable {
-    public static List<DOMResult> doCrawl(String xmlConfigPath, String xslPath, int totalPage) throws IOException, TransformerException, XPathExpressionException {
-       /*
+    public static List<DOMResult> doCrawlForPaginatedSite(String xmlConfigPath, String xslPath, int totalPage) throws IOException, TransformerException, XPathExpressionException {
+       /**
         * Parse XML Config to DOM
         */
         InputStream xmlInputStream = new FileInputStream(xmlConfigPath);
@@ -29,7 +30,9 @@ public class Crawler implements Serializable {
         Node networkOperatorNode = document.getChildNodes().item(0);
         String href = networkOperatorNode.getAttributes().getNamedItem("href").getNodeValue();
 
-        /* */
+        /**
+         * Add page number into href attribute
+         */
         StreamSource xslStreamSource = new StreamSource(xslPath);
         HtmlResolver htmlResolver = new HtmlResolver();
         transformerFactory.setURIResolver(htmlResolver);
@@ -51,5 +54,21 @@ public class Crawler implements Serializable {
 
 
         return domResults;
+    }
+
+    public static DOMResult doCrawlForSingleSite(String xmlConfigPath, String xslPath) throws FileNotFoundException, TransformerException {
+        StreamSource xslCate = new StreamSource(xslPath);
+        InputStream inputStream = new FileInputStream(xmlConfigPath);
+
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        DOMResult domResult = new DOMResult();
+
+        HtmlResolver htmlResolver = new HtmlResolver();
+        transformerFactory.setURIResolver(htmlResolver);
+        Transformer transformer = transformerFactory.newTransformer(xslCate);
+
+        StreamSource streamSource = new StreamSource(inputStream);
+        transformer.transform(streamSource, domResult);
+        return domResult;
     }
 }

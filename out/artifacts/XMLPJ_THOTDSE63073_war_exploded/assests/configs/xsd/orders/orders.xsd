@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://ducthotran2010.github.io/xsd/orders"
+           xmlns:order="http://ducthotran2010.github.io/xsd/order"
+           targetNamespace="http://ducthotran2010.github.io/xsd/orders"
+           elementFormDefault="qualified">
+    <xs:import namespace="http://ducthotran2010.github.io/xsd/order" schemaLocation="order.xsd"/>
+    <xs:element name="Orders" xmlns="http://ducthotran2010.github.io/xsd/orders">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="order:Order" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

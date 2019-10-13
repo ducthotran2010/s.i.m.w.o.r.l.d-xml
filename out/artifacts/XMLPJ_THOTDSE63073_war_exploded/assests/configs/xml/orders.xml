@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Orders xmlns="http://ducthotran2010.github.io/xml/config/orders"
+        simthanglong_href="https://simthanglong.vn"
+        khosim_href="https://khosim.com"
+        giaosimnhanh_href="https://giaosimnhanh.vn/"
+        simsovietnam_href="https://simsovietnam.com/index.php?ajax=neworder"
+/>
+

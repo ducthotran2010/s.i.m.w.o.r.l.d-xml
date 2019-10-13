@@ -24,6 +24,16 @@
 
 
     <servlet>
+        <servlet-name>CrawlOrderServlet</servlet-name>
+        <servlet-class>thotd.controllers.admin.CrawlOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CrawlOrderServlet</servlet-name>
+        <url-pattern>/CrawlOrderServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>thotd.controllers.general.LoginServlet</servlet-class>
     </servlet>
@@ -50,5 +60,15 @@
     <servlet-mapping>
         <servlet-name>SearchSimServlet</servlet-name>
         <url-pattern>/SearchSimServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>LookUpServlet</servlet-name>
+        <servlet-class>thotd.controllers.general.LookUpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LookUpServlet</servlet-name>
+        <url-pattern>/LookUpServlet</url-pattern>
     </servlet-mapping>
 </web-app>
