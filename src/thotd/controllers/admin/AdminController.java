@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class AdminController extends HttpServlet {
+    private static final String LOGIN_PAGE = "LoginServlet";
     private static final String CRAWL_PAGE = "CrawlServlet";
     private static final String CRAWL_ORDER_PAGE = "CrawlOrderServlet";
     private static final String ERROR_PAGE = "error.jsp";
@@ -18,7 +19,9 @@ public class AdminController extends HttpServlet {
         try {
             String btnAction = request.getParameter("btnAction");
 
-            if ("Crawl".equals(btnAction)) {
+            if ("Login".equals(btnAction)) {
+                url = LOGIN_PAGE;
+            } else if ("Crawl".equals(btnAction)) {
                 url = CRAWL_PAGE;
             } else if ("CrawlOrder".equals(btnAction)) {
                 url = CRAWL_ORDER_PAGE;
@@ -30,7 +33,6 @@ public class AdminController extends HttpServlet {
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }
-
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

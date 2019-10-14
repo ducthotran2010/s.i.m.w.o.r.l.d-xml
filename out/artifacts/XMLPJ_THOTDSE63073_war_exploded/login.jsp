@@ -15,7 +15,7 @@
 </head>
 	<body>
 
-	<form method="post" action="GeneralController">
+	<form method="post" action="AdminController">
 		<input name="username" type="text" autofocus />
 		<input name="password" type="password" />
 		<input name="btnAction" value="Login" type="submit" />
