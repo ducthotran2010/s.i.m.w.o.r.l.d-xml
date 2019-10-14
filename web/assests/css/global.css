@@ -4,7 +4,17 @@
 */
 
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+*:focus {
+	outline-color: #d41676;
+}
 
 a {
 	text-decoration: none;
@@ -35,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav {
-	box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
 }
 
 .nav-item {
@@ -76,6 +86,9 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
+.text-gray {
+	color: #898989;
+}
 
 /* CONSTANT MARGIN */
 .my-4 {
@@ -97,6 +110,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 40px;
 }
 /* CONSTANT PADDING */
+.p-8 {
+	padding: 8px;
+}
+
 .p-10 {
 	padding: 10px;
 }
@@ -104,6 +121,11 @@ h1, h2, h3, h4, h5, h6 {
 .py-40 {
 	padding-top: 40px;
 	padding-bottom: 40px;
+}
+
+.py-20 {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 /* CONSTANT FLEX */

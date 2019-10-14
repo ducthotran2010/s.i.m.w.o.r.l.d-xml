@@ -1,6 +1,6 @@
 
 const INIT_OFFSET = 0;
-const SIZE = 50;
+const SIZE = 13;
 
 class Model {
   constructor() {
@@ -61,6 +61,7 @@ class View {
     ths[4].innerHTML = 'Nhãn';
 
     ths.forEach(th => tr.appendChild(th));
+    tr.setAttribute('class', 'home_tr home_tr--head');
     thead.appendChild(tr);
 
     return thead;
@@ -71,30 +72,55 @@ class View {
     const thead = this.getTableHeadOfResultDetail();
     table.appendChild(thead);
 
-    const trs = result.map(({ phoneNumber, price, networkOperator, tag }, index) => {
+    const trs = result.map(({ phoneNumber, price, networkOperator, tag, supplier }, index) => {
       const tr = document.createElement('tr');
-      const tds = [
-        document.createElement('td'),
-        document.createElement('td'),
-        document.createElement('td'),
-        document.createElement('td'),
-        document.createElement('td'),
-      ];
 
+      const href = getLink({ phone: phoneNumber.replace(/\./g,''), supplier})
+      const tds = [];
+      let td = document.createElement('td');
+      let a = document.createElement('a');
+      a.setAttribute('href', href);
+      a.innerHTML = offset + index + 1;
+      td.appendChild(a);
+      tds.push(td);
 
-      tds[0].innerHTML = offset + index + 1;
-      tds[1].innerHTML = phoneNumber;
-      tds[2].innerHTML = price.toLocaleString() + ' đ';
-      tds[3].innerHTML = networkOperator;
-      tds[4].innerHTML = tag;
+      td = document.createElement('td');
+      a = document.createElement('a');
+      a.setAttribute('href', href);
+      a.innerHTML = phoneNumber;
+      td.appendChild(a);
+      tds.push(td);
+
+      td = document.createElement('td');
+      a = document.createElement('a');
+      a.setAttribute('href', href);
+      a.innerHTML = price.toLocaleString() + ' đ';
+      td.appendChild(a);
+      tds.push(td);
+
+      td = document.createElement('td');
+      a = document.createElement('a');
+      a.setAttribute('href', href);
+      a.innerHTML = networkOperator;
+      td.appendChild(a);
+      tds.push(td);
+
+      td = document.createElement('td');
+      a = document.createElement('a');
+      a.setAttribute('href', href);
+      a.innerHTML = tag;
+      td.appendChild(a);
+      tds.push(td);
 
       tds.forEach(td => tr.appendChild(td));
+      tr.setAttribute('class', 'home_tr home_tr--body');
       return tr;
     });
 
     const tbody = document.createElement('tbody');
     trs.forEach(tr => tbody.appendChild(tr));
     table.appendChild(tbody);
+    table.setAttribute('class', 'home_table')
 
     this.resultDetail.innerHTML = '';
     this.resultDetail.appendChild(table);
@@ -233,16 +259,19 @@ class Octopus {
 
     for (let i = 0; i < SimWorld.length; i++) {
       const sim = SimWorld.item(i);
-      const phoneNumber = sim.getElementsByTagName('PhoneNumber')[0].innerHTML;
+      let phoneNumber = sim.getElementsByTagName('PhoneNumber')[0].innerHTML;
+      phoneNumber = phoneNumber.slice(0,3) + "." + phoneNumber.slice(3, 7) + "." + phoneNumber.slice(7);
       const price = sim.getElementsByTagName('Price')[0].innerHTML;
       const networkOperator = sim.getElementsByTagName('NetworkOperator')[0].innerHTML;
-      const tag = sim.getElementsByTagName('Tag')[0].innerHTML;
+      const tag = sim.getElementsByTagName('Tag')[0] !== undefined ? sim.getElementsByTagName('Tag')[0].innerHTML : 'Số Đẹp';
+      const supplier = sim.getElementsByTagName('Supplier')[0].innerHTML;
 
       result.push({
         phoneNumber,
         price: parseFloat(price, 10) * 1000,
         networkOperator,
         tag,
+        supplier,
       })
     }
 
@@ -318,3 +347,4 @@ class Octopus {
 }
 
 const octopus = new Octopus();
+octopus.searchSim({ params: 'btnAction=SearchSim' });

@@ -1,0 +1,166 @@
+:root {
+    --table-radius: 5px;
+}
+
+.home_table {
+    border-radius: var(--table-radius);
+    margin: auto;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    border-spacing: 0;
+    border-collapse: separate;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    width: 90%;
+}
+
+.home_table .home_tr--head th {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 40px;
+    text-align: left;
+    background-color: #ff6868;
+    color: white;
+}
+
+
+.home_table .home_tr--body td a {
+    padding-left: 20px;
+    padding-right: 40px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.home_table .home_tr--body td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+.home_table .home_tr--body td:nth-child(2) {
+    font-weight: 600;
+    color: #9c0000;
+}
+
+.home_table .home_tr--body {
+    transition: all 0.2s ease;
+}
+
+.home_table .home_tr--body:hover {
+    background-color: #ddd;;
+}
+
+.home_table .home_tr--head th:first-child {
+    border-top-left-radius: var(--table-radius);
+}
+
+.home_table .home_tr--head th:last-child {
+    border-top-right-radius: var(--table-radius);
+}
+
+.home_table .home_tr--body:last-child td:first-child {
+    border-bottom-left-radius: var(--table-radius);
+}
+
+.home_table .home_tr--body:last-child td:last-child {
+    border-bottom-right-radius: var(--table-radius);
+}
+
+.home_main {
+    height: calc(100vh - 144px);
+}
+
+.home_main.view {
+    display: flex;
+    margin-top: -13px;
+}
+
+.home_main.home_main--left {
+    width: 350px;
+    border-right: 1px solid #ddd;
+}
+
+.home_main.home_main--right {
+    flex: 1;
+    overflow: scroll;
+}
+
+.home_main.home_form {
+    padding: 16px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#pagination-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#pagination-container > div > * {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#pagination-container button {
+    padding: 12px 24px;
+    border-radius: 5px;
+}
+
+label input {
+    display: none;
+}
+
+label .checker {
+    margin: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #aaa;
+    color: #aaa;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+label .checker.text {
+    margin: 5px;
+    border-radius: 15px;
+
+    width: auto;
+    height: auto;
+
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border: 1px solid #aaa;
+    color: #aaa;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+label input:checked + .checker {
+    border: 1px solid #d41676;
+    color: #d41676;
+}
+
+.btn-primary {
+    background-color: #d41676;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
