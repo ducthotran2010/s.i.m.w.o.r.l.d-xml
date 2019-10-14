@@ -30,7 +30,7 @@ public class SimDAO implements Serializable {
     }
 
 
-    public boolean insert(Sim sim, int networkOperatorId, int tagId, int supplierId) throws SQLException, ClassNotFoundException {
+    public boolean insert(Sim sim, int networkOperatorId, Integer tagId, int supplierId) throws SQLException, ClassNotFoundException {
         boolean result = false;
         try {
             connection = DBUtil.createConnection();
@@ -40,7 +40,11 @@ public class SimDAO implements Serializable {
             statement.setString(1, sim.getPhoneNumber());
             statement.setLong(2, sim.getPrice());
             statement.setInt(3, networkOperatorId);
-            statement.setInt(4, tagId);
+            if (tagId != null) {
+                statement.setInt(4, tagId);
+            } else {
+                statement.setNull(4, java.sql.Types.INTEGER);
+            }
             statement.setInt(5, supplierId);
             result = statement.executeUpdate() > 0;
         } finally {
@@ -60,7 +64,11 @@ public class SimDAO implements Serializable {
             statement = connection.prepareStatement(query);
             statement.setLong(1, sim.getPrice());
             statement.setInt(2, networkOperatorId);
-            statement.setInt(3, tagId);
+            if (tagId != null) {
+                statement.setInt(3, tagId);
+            } else {
+                statement.setNull(3, java.sql.Types.INTEGER);
+            }
             statement.setInt(4, supplierId);
             statement.setString(5, sim.getPhoneNumber());
             result = statement.executeUpdate() > 0;

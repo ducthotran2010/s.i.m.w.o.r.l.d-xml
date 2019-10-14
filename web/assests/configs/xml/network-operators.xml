@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <NetworkOperators xmlns="http://ducthotran2010.github.io/xml/config"
-                  href="https://sodepami.vn/tim-sim-so-dep.html?page="
-                  domain="https://sodepami.vn"/>
+                  sodepami_name="Sodepami"
+                  sodepami_domain="https://sodepami.vn/"
+                  sodepami_href="https://sodepami.vn/tim-sim-so-dep.html?page="
+
+                  tongkhosim_name="Tongkhosim"
+                  tongkhosim_domain="https://tongkhosim.com/"
+                  tongkhosim_href="https://tongkhosim.com/?page="
+
+                  simsodep_name="Simsodep"
+                  simsodep_domain="https://simsodep.com/"
+                  simsodep_href="https://simsodep.com/?page="
+>
+<!--    simsodep_href="http://localhost:8080/page=1"-->
+    <Sodepami>
+        <Viettel>viettel</Viettel>
+        <Vinaphone>vinaphone</Vinaphone>
+        <Mobifone>mobifone</Mobifone>
+        <Vietnamobile>vietnamobile</Vietnamobile>
+        <Gmobile>gmobile</Gmobile>
+    </Sodepami>
+    <Tongkhosim>
+        <Viettel>Viettel</Viettel>
+        <Vinaphone>Vinaphone</Vinaphone>
+        <Mobifone>Mobifone</Mobifone>
+        <Vietnamobile>VietNamobile</Vietnamobile>
+        <Gmobile>Gmobile</Gmobile>
+    </Tongkhosim>
+    <Simsodep>
+        <Viettel>network n1</Viettel>
+        <Vinaphone>network n3</Vinaphone>
+        <Mobifone>network n2</Mobifone>
+        <Vietnamobile>network n4</Vietnamobile>
+        <Gmobile>network n5</Gmobile>
+    </Simsodep>
+</NetworkOperators>
 

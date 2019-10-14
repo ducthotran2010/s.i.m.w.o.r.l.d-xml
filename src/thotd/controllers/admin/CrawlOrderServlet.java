@@ -27,29 +27,28 @@ public class CrawlOrderServlet extends HttpServlet {
         String url = ERROR_PAGE;
 
         try {
-            String path = request.getServletContext().getRealPath("/");
-            String xmlPath = path + PathConstant.CONFIG_ORDERS_XML;
-            String xslPath = path + PathConstant.CONFIG_ORDERS_XSL_KHOSIM;
-            DOMResult domResult = Crawler.doCrawlForSingleSite(xmlPath, xslPath);
+            String realPath = request.getServletContext().getRealPath("/");
+            String xmlPath = realPath + PathConstant.CONFIG_ORDERS_XML;
+            for (String path: PathConstant.CONFIG_ORDERS_XSL) {
+                String xslPath = realPath + path;
+                DOMResult domResult = Crawler.doCrawlForSingleSite(xmlPath, xslPath);
 
+                /**
+                 * Save to file in development stage
+                 */
+                /*
+                TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                Transformer transformer = transformerFactory.newTransformer();
+                StreamResult streamResult = new StreamResult(new FileOutputStream("/Users/thotd/Desktop/crawled.xml"));
+                transformer.transform(new DOMSource(domResult.getNode()), streamResult);
+                 */
 
-            /**
-             * Save to file in development stage
-             */
-             TransformerFactory transformerFactory = TransformerFactory.newInstance();
-             Transformer transformer = transformerFactory.newTransformer();
-             StreamResult streamResult = new StreamResult(new FileOutputStream("/Users/thotd/Desktop/crawled.xml"));
-             transformer.transform(new DOMSource(domResult.getNode()), streamResult);
-            /*
-             */
-
-            /**
-             * Save to database
-             */
-            System.out.println("hi there...");
-            DataResolver dataResolver = new DataResolver();
-            dataResolver.saveOrderDomResultToDatabase(domResult);
-
+                /**
+                 * Save to database
+                 */
+                DataResolver dataResolver = new DataResolver();
+                dataResolver.saveOrderDomResultToDatabase(domResult);
+            }
             url = ADMIN_PAGE;
         } catch (Exception e) {
             request.setAttribute("Error", "Could not crawl data");

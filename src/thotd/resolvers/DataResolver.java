@@ -56,11 +56,7 @@ public class DataResolver implements Serializable {
             for (Tag tag : networkOperator.getTag()) {
                 tagName = tag.getName();
                 handleInsertGeneral(tagDAO, tagName);
-
                 tagId = handleGettingIdByNameGeneral(tagDAO, tagName);
-                if (tagId == null) {
-                    continue;
-                }
 
                 for (Sim sim : tag.getSim()) {
                     handleInsertSim(sim, networkOperatorId, tagId, supplierId);
@@ -69,7 +65,7 @@ public class DataResolver implements Serializable {
         }
     }
 
-    private boolean handleInsertSim(Sim sim, int networkOperatorId, int tagId, int supplierId) {
+    private boolean handleInsertSim(Sim sim, int networkOperatorId, Integer tagId, int supplierId) {
         boolean result = false;
         try {
             result = simDAO.insert(sim, networkOperatorId, tagId, supplierId);
@@ -112,7 +108,6 @@ public class DataResolver implements Serializable {
             result = (boolean) object.getClass().getMethod("insert", Order.class).invoke(object, args);
         } catch (Exception e) {
             /* do nothing */
-            e.printStackTrace();
         }
 
         return result;
@@ -122,10 +117,8 @@ public class DataResolver implements Serializable {
     public void saveOrderDomResultToDatabase(DOMResult domResult) throws JAXBException {
         Orders orders = new Orders();
         orders = (Orders) JAXBUtil.unmarshal(orders.getClass(), domResult.getNode());
-        System.out.println("after unmarshal");
         OrderDAO orderDAO = new OrderDAO();
         for (Order order : orders.getOrder()) {
-            System.out.println("order: "  + order.getName());
             handleInsertOrder(orderDAO, order);
         }
 

@@ -15,6 +15,8 @@ import javax.xml.bind.annotation.XmlType;
  * &lt;simpleType name="SupplierType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *     &lt;enumeration value="Sodepami"/>
+ *     &lt;enumeration value="Tongkhosim"/>
+ *     &lt;enumeration value="Simsodep"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -25,7 +27,11 @@ import javax.xml.bind.annotation.XmlType;
 public enum SupplierType {
 
     @XmlEnumValue("Sodepami")
-    SODEPAMI("Sodepami");
+    SODEPAMI("Sodepami"),
+    @XmlEnumValue("Tongkhosim")
+    TONGKHOSIM("Tongkhosim"),
+    @XmlEnumValue("Simsodep")
+    SIMSODEP("Simsodep");
     private final String value;
 
     SupplierType(String v) {

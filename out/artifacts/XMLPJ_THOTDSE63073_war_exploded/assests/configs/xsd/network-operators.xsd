@@ -20,6 +20,8 @@
         <xs:restriction base="xs:string">
             <!-- add new site in here -->
             <xs:enumeration value="Sodepami"/>
+            <xs:enumeration value="Tongkhosim"/>
+            <xs:enumeration value="Simsodep"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>

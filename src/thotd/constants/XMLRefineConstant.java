@@ -11,7 +11,6 @@ public class XMLRefineConstant {
         public static final String ATTR_NAME = "attributeName";
         public static final String EQUAL_WAIT = "equalWait";
         public static final String EQUAL = "equal";
-        public static final String VALUE_WAIT = "valueWait";
         public static final String ATTR_VALUE_NQ = "nonQuotedAttributeValue";
         public static final String ATTR_VALUE_Q = "quotedAttributeValue";
         public static final String EMPTY_SLASH = "emptyTagSlash";

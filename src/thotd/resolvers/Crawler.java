@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Crawler implements Serializable {
-    public static List<DOMResult> doCrawlForPaginatedSite(String xmlConfigPath, String xslPath, int totalPage) throws IOException, TransformerException, XPathExpressionException {
+    public static List<DOMResult> doCrawlForPaginatedSite(String xmlConfigPath, String xslPath, String hrefName, int totalPage) throws IOException, TransformerException, XPathExpressionException {
        /**
         * Parse XML Config to DOM
         */
@@ -28,7 +28,7 @@ public class Crawler implements Serializable {
 
         Document document = (Document) domResult.getNode();
         Node networkOperatorNode = document.getChildNodes().item(0);
-        String href = networkOperatorNode.getAttributes().getNamedItem("href").getNodeValue();
+        String href = networkOperatorNode.getAttributes().getNamedItem(hrefName).getNodeValue();
 
         /**
          * Add page number into href attribute
@@ -43,7 +43,7 @@ public class Crawler implements Serializable {
             domResult = new DOMResult();
             /* Update href attribute */
             String newHref = href + i;
-            networkOperatorNode.getAttributes().getNamedItem("href").setNodeValue(newHref);
+            networkOperatorNode.getAttributes().getNamedItem(hrefName).setNodeValue(newHref);
 
             InputStream inputStream = DocumentUtil.parseDocumentToInputStream(document);
             StreamSource streamSource = new StreamSource(inputStream);

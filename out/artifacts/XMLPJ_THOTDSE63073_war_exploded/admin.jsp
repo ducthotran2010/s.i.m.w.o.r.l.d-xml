@@ -19,10 +19,9 @@
     <p>Hello ${sessionScope.USER.fullName}</p>
     <form method="post" action="AdminController">
         <label>Crawl dữ liệu sim</label>
-        <input name="totalPage" value="2" type="number" />
+        <input name="totalPage" value="2" type="number" min="1" max="10"/>
         <input name="btnAction" value="Crawl" type="submit"/>
     </form>
-    hihi &aacute;
 
     <form method="post" action="AdminController">
         <input name="btnAction" value="CrawlOrder" autofocus type="submit"/>

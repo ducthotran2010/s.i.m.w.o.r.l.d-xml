@@ -7,7 +7,7 @@
     <xsl:output method="xml" omit-xml-declaration="yes" indent="yes"/>
 
     <xsl:template match="config:NetworkOperators">
-        <xsl:variable name="document" select="document(@href)"/>
+        <xsl:variable name="document" select="document(@sodepami_href)"/>
         <xsl:variable name="table" select="$document//table[@class='tab-sim']"/>
 
         <!-- local name used as variable to find on this web -->
@@ -100,7 +100,6 @@
         <xsl:for-each select="$table/tr[td[contains(@class, $networkOperatorName)] and td=$tagName]">
             <xsl:variable name="phoneNumber" select="translate(normalize-space(td[@class='simnumb']),'.','')"/>
             <xsl:variable name="price" select="td[contains(., '₫')]"/>
-            <xsl:variable name="tag" select="td[contains(@class, 'res-tab-hide')]"/>
             <xsl:element name="Sim" xmlns="http://ducthotran2010.github.io/xsd/sim">
                 <xsl:element name="PhoneNumber">
                     <xsl:value-of select="$phoneNumber"/>

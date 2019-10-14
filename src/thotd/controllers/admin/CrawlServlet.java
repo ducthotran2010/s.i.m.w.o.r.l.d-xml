@@ -43,30 +43,32 @@ public class CrawlServlet extends HttpServlet {
 
         try {
             if (totalPage < 1 || LIMIT_TOTAL_PAGE < totalPage) {
-                throw new OutOfMemoryError("Crawl too much pages can lead out of memory");
+                request.setAttribute("Error", "Crawling too much pages can lead out exhausted of memory");
+                return;
             }
 
             String path = request.getServletContext().getRealPath("/");
             String xmlPath = path + PathConstant.CONFIG_XML;
-            String xlsPath = path + PathConstant.CONFIG_XSL_SODEPAMI;
-            ArrayList<DOMResult> domResults = (ArrayList<DOMResult>) Crawler.doCrawlForPaginatedSite(xmlPath, xlsPath, totalPage);
 
-            /**
-             * Save to file in development stage
-             */
-            /*
-             TransformerFactory transformerFactory = TransformerFactory.newInstance();
-             Transformer transformer = transformerFactory.newTransformer();
-             StreamResult streamResult = new StreamResult(new FileOutputStream("/Users/thotd/Desktop/crawled.xml"));
-             transformer.transform(new DOMSource(domResults.get(0).getNode()), streamResult);
-             */
+            int totalDomain = PathConstant.CONFIG_XSL.size();
+            for (int i = 0; i < totalDomain; ++i) {
+                String xlsPath = path + PathConstant.CONFIG_XSL.get(i);
+                ArrayList<DOMResult> domResults = (ArrayList<DOMResult>)
+                        Crawler.doCrawlForPaginatedSite(xmlPath, xlsPath, PathConstant.CONFIG_HREF.get(i), totalPage);
 
-            /**
-             * Save to database
-             */
-            DataResolver dataResolver = new DataResolver();
-            for (DOMResult domResult : domResults) {
-                dataResolver.saveDomResultToDatabase(domResult);
+                /* Save to file in development stage */
+                /*
+                TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                Transformer transformer = transformerFactory.newTransformer();
+                StreamResult streamResult = new StreamResult(new FileOutputStream("/Users/thotd/Desktop/crawled.xml"));
+                transformer.transform(new DOMSource(domResults.get(0).getNode()), streamResult);
+                 */
+
+                /* Save to database */
+                DataResolver dataResolver = new DataResolver();
+                for (DOMResult domResult : domResults) {
+                    dataResolver.saveDomResultToDatabase(domResult);
+                }
             }
 
             url = ADMIN_PAGE;
