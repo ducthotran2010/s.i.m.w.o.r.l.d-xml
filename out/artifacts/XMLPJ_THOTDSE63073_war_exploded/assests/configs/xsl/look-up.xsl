@@ -6,7 +6,6 @@
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
 
-
         <div class="wrapper-body--head">
             <p>Chủ nhân số điện thoại có thể là:</p>
         </div>

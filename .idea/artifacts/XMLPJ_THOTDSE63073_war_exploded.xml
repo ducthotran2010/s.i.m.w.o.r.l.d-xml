@@ -10,6 +10,7 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="sqljdbc42" />
           <element id="library" level="project" name="jstl-1.2" />
+          <element id="library" level="project" name="jsoup-1.12.1" />
         </element>
       </element>
     </root>

@@ -1,5 +1,6 @@
 .wrapper-body--head {
     width: 60%;
+    min-width: 600px !important;
     margin: auto;
 }
 

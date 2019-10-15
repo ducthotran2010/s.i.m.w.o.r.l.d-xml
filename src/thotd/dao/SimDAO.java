@@ -5,10 +5,7 @@ import thotd.utils.DBUtil;
 import thotd.utils.SQLQueryUtil;
 
 import java.io.Serializable;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class SimDAO implements Serializable {
@@ -30,11 +27,11 @@ public class SimDAO implements Serializable {
     }
 
 
-    public boolean insert(Sim sim, int networkOperatorId, Integer tagId, int supplierId) throws SQLException, ClassNotFoundException {
+    public boolean insert(Sim sim, int networkOperatorId, Integer tagId, int supplierId, Integer phongThuyId) throws SQLException, ClassNotFoundException {
         boolean result = false;
         try {
             connection = DBUtil.createConnection();
-            String query = "INSERT INTO Sim (phone, price, networkOperatorId, tagId, supplierId) VALUES (?, ?, ?, ?, ?) ";
+            String query = "INSERT INTO Sim (phone, price, networkOperatorId, tagId, supplierId, phongthuyId) VALUES (?, ?, ?, ?, ?, ?) ";
 
             statement = connection.prepareStatement(query);
             statement.setString(1, sim.getPhoneNumber());
@@ -43,9 +40,14 @@ public class SimDAO implements Serializable {
             if (tagId != null) {
                 statement.setInt(4, tagId);
             } else {
-                statement.setNull(4, java.sql.Types.INTEGER);
+                statement.setNull(4, Types.INTEGER);
             }
             statement.setInt(5, supplierId);
+            if (phongThuyId != null) {
+                statement.setInt(6, phongThuyId);
+            } else {
+                statement.setNull(6, Types.INTEGER);
+            }
             result = statement.executeUpdate() > 0;
         } finally {
             closeConnection();
@@ -54,23 +56,32 @@ public class SimDAO implements Serializable {
         return result;
     }
 
-    public boolean update(Sim sim, Integer networkOperatorId, Integer tagId, int supplierId) throws SQLException, ClassNotFoundException {
+    public boolean update(Sim sim, Integer networkOperatorId, Integer tagId, int supplierId, Integer phongThuyId) throws SQLException, ClassNotFoundException {
         boolean result = false;
 
         try {
             connection = DBUtil.createConnection();
-            String query = "UPDATE Sim SET price = ?, networkOperatorId = ?, tagId = ?, supplierId = ? WHERE phone = ?";
+            String query = "UPDATE Sim SET price = ?, networkOperatorId = ?, tagId = ?, supplierId = ?, phongthuyId = ? WHERE phone = ?";
 
             statement = connection.prepareStatement(query);
             statement.setLong(1, sim.getPrice());
             statement.setInt(2, networkOperatorId);
+
             if (tagId != null) {
                 statement.setInt(3, tagId);
             } else {
                 statement.setNull(3, java.sql.Types.INTEGER);
             }
+
             statement.setInt(4, supplierId);
-            statement.setString(5, sim.getPhoneNumber());
+
+            if (phongThuyId != null) {
+                statement.setInt(5, phongThuyId);
+            } else {
+                statement.setNull(5, java.sql.Types.INTEGER);
+            }
+
+            statement.setString(6, sim.getPhoneNumber());
             result = statement.executeUpdate() > 0;
         } finally {
             closeConnection();
@@ -81,7 +92,7 @@ public class SimDAO implements Serializable {
 
 
     private String getSearchQuery(String phone, String priceLimit, String[] startWiths, String[] notIncludes, String[] networkOperators) {
-        String selectClause = "SELECT phone as PhoneNumber, price as Price, N.name as NetworkOperator, tagName as Tag, SU.name as Supplier " +
+        String selectClause = "SELECT TOP 325 phone as PhoneNumber, price as Price, N.name as NetworkOperator, tagName as Tag, SU.name as Supplier, phongthuyId as PhongThuyId " +
                 "FROM [Sim] AS S JOIN [NetworkOperator] AS N ON S.networkOperatorId = N.id LEFT JOIN [Tag] AS T ON S.tagId = T.id JOIN Supplier as SU ON S.supplierId = SU.id ";
 
         int[] lengths = {
@@ -113,7 +124,6 @@ public class SimDAO implements Serializable {
         String formatClause = " FOR XML PATH('Sim'), ROOT('SimWorld')";
         String result = selectClause + conditionClause + formatClause;
 
-        System.out.println(result);
         return result;
     }
 

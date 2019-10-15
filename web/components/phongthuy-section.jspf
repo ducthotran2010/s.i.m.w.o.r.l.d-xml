@@ -1,0 +1,33 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<style>
+    .info--wrapper {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 12px 24px;
+        margin-bottom: 20px;
+    }
+    .input-wrapper {
+        margin-bottom: 20px;
+    }
+
+</style>
+
+<div class="wrapper-body--head">
+    <p>Tra số phong thuỷ, tránh vận rủi khả dĩ</p>
+    <form class="input-wrapper" onsubmit="function handeSubmit(e) { e.preventDefault() }">
+        <input id="input" name="phone" placeholder="Nhập SDT hoặc 4 số cuối cần tra cứu" type="text" value="${param.phone}"
+               pattern="(\d{4}|\d{10})" required autofocus/>
+    </form>
+
+    <div class="info--wrapper">
+        <p class="upper-case transition text-14 text-bold text-gray">
+            CÁCH TÍNH THỦ CÔNG
+        </p>
+
+        <p class="info--body">
+            Để tính sim phong thủy đại cát chúng ta chỉ dựa vào 4 số cuối của số điện thoai. Chúng ta lấy 4 số cuối của số điện thoại mang chia cho 80 sau đó trừ đi phần chẵn, tiếp đó kết quả lẻ thu được ta đem nhân lại với 80, được một số cuối cùng rồi đem tra với bảng "Sim đại cát" để biết được kết quả chi tiết.
+        </p>
+    </div>
+</div>

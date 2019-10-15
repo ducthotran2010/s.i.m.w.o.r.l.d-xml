@@ -82,6 +82,27 @@
         <url-pattern>/admin</url-pattern>
     </servlet-mapping>
 
+
+
+    <servlet>
+        <servlet-name>PhongThuyServlet</servlet-name>
+        <servlet-class>thotd.controllers.general.PhongThuyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PhongThuyServlet</servlet-name>
+        <url-pattern>/PhongThuyServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>CrawlPhongThuyServlet</servlet-name>
+        <servlet-class>thotd.controllers.admin.CrawlPhongThuyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CrawlPhongThuyServlet</servlet-name>
+        <url-pattern>/CrawlPhongThuyServlet</url-pattern>
+    </servlet-mapping>
+
     <session-config>
         <session-timeout>1440</session-timeout>
     </session-config>

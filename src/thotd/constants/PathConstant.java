@@ -11,6 +11,7 @@ public class PathConstant {
      *
      * Work fine with:
      *  - Sodepami
+     *  - Simsodep
      *
      * Got 403 with:
      *  - Tongkhosim
@@ -40,6 +41,7 @@ public class PathConstant {
     );
 
 
+
     /**
      * Path config for order crawl
      *
@@ -56,6 +58,7 @@ public class PathConstant {
     public static final String CONFIG_ORDERS_XSL_KHOSIM = "assests/configs/xsl/orders/khosim.xsl";
     /* public static final String CONFIG_ORDERS_XSL_GIAOSIMNHANH = "assests/configs/xsl/orders/giaosimnhanh.xsl"; */
     /* public static final String CONFIG_ORDERS_XSL_SIMTHANGLONG = "assests/configs/xsl/orders/simthanglong.xsl"; */
+
     public static final List<String> CONFIG_ORDERS_XSL = Arrays.asList(
             CONFIG_ORDERS_XSL_SIMSOVIETNAM,
             CONFIG_ORDERS_XSL_KHOSIM
@@ -68,4 +71,16 @@ public class PathConstant {
             "web/assests/configs/xsd/orders/orders.xsd"
     );
 
+    /**
+     * Path config for PhongThuy crawl
+     */
+    public static final String CONFIG_PHONGTHUY_XML = "assests/configs/xml/phongthuy.xml";
+    public static final String CONFIG_PHONGTHUY_XSL = "assests/configs/xsl/phongthuy/chosim24h.xsl";
+    public static final String CONFIG_PHONGTHUY_INFO = "assests/init_phongthuy.html";
+
+
+    public static final List<String> CONFIG_PHONGTHUY_SCHEMAS = Arrays.asList(
+            "web/assests/configs/xsd/phongthuy/section.xsd",
+            "web/assests/configs/xsd/phongthuy/phongthuy.xsd"
+    );
 }

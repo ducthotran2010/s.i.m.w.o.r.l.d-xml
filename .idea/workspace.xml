@@ -7,29 +7,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33adb6b0-3c92-4c8e-adaa-0de8db9b0b2c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/XMLPJ_THOTDSE63073_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/XMLPJ_THOTDSE63073_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eadcebe7-5b58-4232-8f01-937cda81c445.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/eadcebe7-5b58-4232-8f01-937cda81c445.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eadcebe7-5b58-4232-8f01-937cda81c445/storage_v2/_src_/database/SimWorld.G0FuHw/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/eadcebe7-5b58-4232-8f01-937cda81c445/storage_v2/_src_/database/SimWorld.G0FuHw/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XMLPJ_THOTDSE63073.iml" beforeDir="false" afterPath="$PROJECT_DIR$/XMLPJ_THOTDSE63073.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/constants/DomainConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/constants/DomainConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/constants/PathConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/constants/PathConstant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/controllers/admin/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/controllers/admin/AdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/dao/SimDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/dao/SimDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/refiners/XMLRefiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/refiners/XMLRefiner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/resolvers/DataResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/resolvers/DataResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/resolvers/HtmlResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/classes/thotd/resolvers/HtmlResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/configs/xsl/look-up.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/configs/xsl/look-up.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/configs/xsl/tongkhosim.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/configs/xsl/tongkhosim.xsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/css/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/css/look-up.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/css/look-up.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/MVOjs/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/MVOjs/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/utils/query.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/utils/query.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/navbar.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/navbar.jspf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/search-section.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/search-section.jspf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/constants/DomainConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/constants/DomainConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/constants/PathConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/constants/PathConstant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/controllers/admin/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/controllers/admin/AdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/dao/SimDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/dao/SimDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/refiners/XMLRefiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/refiners/XMLRefiner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/resolvers/DataResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/resolvers/DataResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/resolvers/HtmlResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XMLPJ_THOTDSE63073/thotd/resolvers/HtmlResolver.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/thotd/constants/DomainConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/constants/DomainConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/constants/PathConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/constants/PathConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/controllers/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/controllers/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/controllers/general/GeneralController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/controllers/general/GeneralController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/thotd/dao/SimDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/dao/SimDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/refiners/XMLRefiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/refiners/XMLRefiner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/resolvers/DataResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/resolvers/DataResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/thotd/resolvers/HtmlResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/resolvers/HtmlResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/assests/configs/xsl/look-up.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/configs/xsl/look-up.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assests/configs/xsl/tongkhosim.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/configs/xsl/tongkhosim.xsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/assests/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/css/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assests/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assests/css/look-up.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/css/look-up.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/assests/js/MVOjs/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/js/MVOjs/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/components/look-up-section.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/web/components/look-up-section.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assests/js/utils/query.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/js/utils/query.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/components/navbar.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/web/components/navbar.jspf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/look-up.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/look-up.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,9 +97,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Jsp File" />
+        <option value="jsf" />
+        <option value="facelets" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -111,7 +137,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/assests/configs/xsl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/assests/configs/xsl/phongthuy" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
@@ -119,19 +145,22 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/assests/configs/xml/test" />
-      <recent name="$PROJECT_DIR$/web/assests/configs/xml" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/assests/configs/xsl/phongthuy" />
+      <recent name="$PROJECT_DIR$/web/assests/configs/xsd/orders" />
+      <recent name="$PROJECT_DIR$/web/assests/configs/xsd" />
+      <recent name="$PROJECT_DIR$/web/assests" />
+      <recent name="$PROJECT_DIR$/web/assests/configs/xsl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="thotd.generator" />
       <recent name="thotd.controllers.admin" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/assests/configs/xsl" />
-      <recent name="$PROJECT_DIR$/web/assests/configs/xsl/orders" />
-      <recent name="$PROJECT_DIR$/web/assests/configs/xsd/orders" />
-      <recent name="$PROJECT_DIR$/web/components" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/assests/configs/xsd/phongthuy" />
+      <recent name="$PROJECT_DIR$/web/assests" />
+      <recent name="$PROJECT_DIR$/web/assests/configs/xml/test" />
+      <recent name="$PROJECT_DIR$/web/assests/configs/xml" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -149,6 +178,13 @@
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.461">
     <configuration name="Order Class Generator" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="thotd.generator.OrderXMLGenerator" />
+      <module name="XMLPJ_THOTDSE63073" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhongThuy Class Generator" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="thotd.generator.PhongThuyXMLGenerator" />
       <module name="XMLPJ_THOTDSE63073" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -243,6 +279,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.PhongThuy Class Generator" />
       <item itemvalue="Application.Sim Class Generator" />
       <item itemvalue="Application.Order Class Generator" />
       <item itemvalue="Application.TestSQLQueryUtil" />
@@ -256,12 +293,7 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@47d05822" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@47d05822" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4395d097" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@936b6822" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -280,7 +312,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570798665568</updated>
       <workItem from="1570798669357" duration="72811000" />
-      <workItem from="1571050874739" duration="16871000" />
+      <workItem from="1571050874739" duration="41821000" />
     </task>
     <servers />
   </component>

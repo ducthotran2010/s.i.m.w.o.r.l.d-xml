@@ -23,9 +23,12 @@ import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.jsoup.Jsoup;
+
 public class HtmlResolver implements URIResolver, Serializable {
     @Override
     public Source resolve(String href, String base) {
+        System.out.println("here....");
         if (href != null && StringUtil.isStringStartWithListString(DomainConstant.DOMAIN_LIST, href)) {
             System.out.println("good choose");
             try {
@@ -33,7 +36,7 @@ public class HtmlResolver implements URIResolver, Serializable {
                 StreamSource streamSource;
                 try (InputStream http = urlConnection.getInputStream()) {
                     streamSource = preProcessInputStream(http);
-                return streamSource;
+                    return streamSource;
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -56,8 +59,8 @@ public class HtmlResolver implements URIResolver, Serializable {
      * Get the first matched {@code tag} in {@code source}
      * if not match return the original {@code source}
      *
-     * @param      source  the http source as a string.
-     * @param      tagName  the initial capacity.
+     * @param source  the http source as a string.
+     * @param tagName the initial capacity.
      */
     private String getTag(String source, String tagName) {
         String result = source;
@@ -73,7 +76,9 @@ public class HtmlResolver implements URIResolver, Serializable {
     }
 
     private StreamSource preProcessInputStream(InputStream http) throws IOException {
+
         String httpString = "<html>" + StringUtil.parseInputStreamToString(http) + "</html>";
+
 
         httpString = httpString.replaceAll("\n", "");
         httpString = httpString.replaceAll("&nbsp;", "");
@@ -81,7 +86,6 @@ public class HtmlResolver implements URIResolver, Serializable {
         httpString = removeTag(httpString, "script");
         httpString = removeTag(httpString, "style");
         httpString = removeComment(httpString);
-        System.out.println(httpString);
 
         XMLRefiner xmlRefiner = new XMLRefiner();
         httpString = xmlRefiner.doRefine(httpString);
@@ -94,10 +98,10 @@ public class HtmlResolver implements URIResolver, Serializable {
 
     /**
      * NOT USE ANY MORE
-     *
+     * <p>
      * Refine by adding missed close tag in {@code inputStream}
      *
-     * @param      inputStream  the http source as a string.
+     * @param inputStream the http source as a string.
      */
     private InputStream doRefine(InputStream inputStream) throws ParserConfigurationException, SAXException, IOException {
         boolean isWellFormed = false;

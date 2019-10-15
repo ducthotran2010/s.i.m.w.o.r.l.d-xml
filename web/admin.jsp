@@ -24,7 +24,12 @@
     </form>
 
     <form method="post" action="AdminController">
-        <input name="btnAction" value="CrawlOrder" autofocus type="submit"/>
+        <input name="btnAction" value="CrawlOrder" type="submit"/>
     </form>
+
+    <form method="post" action="AdminController">
+        <input name="btnAction" value="CrawlPhongThuy" autofocus type="submit"/>
+    </form>
+
 </body>
 </html>

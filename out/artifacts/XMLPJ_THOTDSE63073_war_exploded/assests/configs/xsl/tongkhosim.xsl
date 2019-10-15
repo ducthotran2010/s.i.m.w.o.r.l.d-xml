@@ -10,15 +10,6 @@
         <xsl:variable name="document" select="document(@tongkhosim_href)"/>
         <xsl:variable name="list" select="$document//table[@class='table table-bordered table-striped']/tbody/tr"/>
 
-        <!-- local name used as variable to find on this web -->
-<!--        <xsl:variable name="viettel" select="Tongkhosim/Viettel"/>-->
-<!--        <xsl:variable name="vinaphone" select="Tongkhosim/Vinaphone"/>-->
-<!--        <xsl:variable name="mobifone" select="Tongkhosim/Mobifone"/>-->
-<!--        <xsl:variable name="vietnamobile" select="Tongkhosim/Vietnamobile"/>-->
-<!--        <xsl:variable name="gmobile" select="Tongkhosim/Gmobile"/>-->
-
-
-
         <xsl:element name="NetworkOperators" xmlns="http://ducthotran2010.github.io/xsd/network-operators">
             <xsl:attribute name="supplier">
                 <xsl:value-of select="@tongkhosim_name"/>

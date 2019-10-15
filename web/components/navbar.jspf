@@ -19,9 +19,9 @@
 			};
 
 			final String[] navLinks = {
-				"/XMLPJ_THOTDSE63073/",
-				"#",
-				"/XMLPJ_THOTDSE63073/look-up.jsp",
+				"index.jsp",
+				"phongthuy.jsp",
+				"look-up.jsp",
 				"#",
 				"#",
 			};

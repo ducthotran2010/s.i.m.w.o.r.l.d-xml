@@ -37,3 +37,10 @@ const getLink = ({ phone, supplier }) => {
       return `https://sodepami.vn/${phone}`;
   }
 }
+
+
+
+const getPhongThuyLink = (phone) => {
+  const last4digit = phone.substring(6);
+    return `phongthuy.jsp?phone=${last4digit}`;
+}

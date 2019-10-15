@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://ducthotran2010.github.io/xsd/section"
+           targetNamespace="http://ducthotran2010.github.io/xsd/section"
+           elementFormDefault="qualified">
+    <xs:element name="Section">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Number" type="xs:int"/>
+                <xs:element name="Mean" type="xs:string"/>
+                <xs:element name="Brief" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

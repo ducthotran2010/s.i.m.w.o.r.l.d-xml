@@ -86,6 +86,7 @@ input[type="text"], input[type="number"] {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	width: 90%;
+	min-width: 600px;
 }
 
 .home_table .home_tr--head th {

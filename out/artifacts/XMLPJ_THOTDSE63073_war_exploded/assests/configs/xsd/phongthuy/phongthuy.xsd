@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://ducthotran2010.github.io/xsd/phong-thuy"
+           targetNamespace="http://ducthotran2010.github.io/xsd/phong-thuy"
+           xmlns:section="http://ducthotran2010.github.io/xsd/section"
+           elementFormDefault="qualified">
+    <xs:import namespace="http://ducthotran2010.github.io/xsd/section" schemaLocation="section.xsd"/>
+    <xs:element name="PhongThuy" xmlns="http://ducthotran2010.github.io/xsd/phong-thuy">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="section:Section" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

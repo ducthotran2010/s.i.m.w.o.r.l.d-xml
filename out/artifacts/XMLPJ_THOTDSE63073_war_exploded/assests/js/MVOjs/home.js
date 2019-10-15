@@ -52,6 +52,7 @@ class View {
       document.createElement('th'),
       document.createElement('th'),
       document.createElement('th'),
+      document.createElement('th'),
     ];
 
     ths[0].innerHTML = 'STT';
@@ -59,6 +60,7 @@ class View {
     ths[2].innerHTML = 'Giá bán';
     ths[3].innerHTML = 'Nhà mạng';
     ths[4].innerHTML = 'Nhãn';
+    ths[5].innerHTML = 'Số phong thuỷ';
 
     ths.forEach(th => tr.appendChild(th));
     tr.setAttribute('class', 'home_tr home_tr--head');
@@ -72,10 +74,10 @@ class View {
     const thead = this.getTableHeadOfResultDetail();
     table.appendChild(thead);
 
-    const trs = result.map(({ phoneNumber, price, networkOperator, tag, supplier }, index) => {
+    const trs = result.map(({ phoneNumber, price, networkOperator, tag, supplier, phongthuy }, index) => {
       const tr = document.createElement('tr');
 
-      const href = getLink({ phone: phoneNumber.replace(/\./g,''), supplier})
+      const href = getLink({ phone: phoneNumber, supplier})
       const tds = [];
       let td = document.createElement('td');
       let a = document.createElement('a');
@@ -87,7 +89,7 @@ class View {
       td = document.createElement('td');
       a = document.createElement('a');
       a.setAttribute('href', href);
-      a.innerHTML = phoneNumber;
+      a.innerHTML = phoneNumber.slice(0,3) + "." + phoneNumber.slice(3, 7) + "." + phoneNumber.slice(7);
       td.appendChild(a);
       tds.push(td);
 
@@ -109,6 +111,13 @@ class View {
       a = document.createElement('a');
       a.setAttribute('href', href);
       a.innerHTML = tag;
+      td.appendChild(a);
+      tds.push(td);
+
+      td = document.createElement('td');
+      a = document.createElement('a');
+      a.setAttribute('href', getPhongThuyLink(phoneNumber));
+      a.innerHTML = phongthuy;
       td.appendChild(a);
       tds.push(td);
 
@@ -147,7 +156,7 @@ class Octopus {
     this.view.form.addEventListener('submit', this.handleSubmitForm);
     this.view.paginationLeft.addEventListener('click', this.handlePaginationLeft);
     this.view.paginationRight.addEventListener('click', this.handlePaginationRight);
-    this.view.paginationInput.addEventListener('keypress', this.handlePaginationInput);
+    this.view.paginationInput.addEventListener('keyup', this.handlePaginationInput);
     this.view.paginationForm.addEventListener('submit', this.handlePaginationSubmit);
   }
 
@@ -259,12 +268,12 @@ class Octopus {
 
     for (let i = 0; i < SimWorld.length; i++) {
       const sim = SimWorld.item(i);
-      let phoneNumber = sim.getElementsByTagName('PhoneNumber')[0].innerHTML;
-      phoneNumber = phoneNumber.slice(0,3) + "." + phoneNumber.slice(3, 7) + "." + phoneNumber.slice(7);
+      const phoneNumber = sim.getElementsByTagName('PhoneNumber')[0].innerHTML;
       const price = sim.getElementsByTagName('Price')[0].innerHTML;
       const networkOperator = sim.getElementsByTagName('NetworkOperator')[0].innerHTML;
       const tag = sim.getElementsByTagName('Tag')[0] !== undefined ? sim.getElementsByTagName('Tag')[0].innerHTML : 'Số Đẹp';
       const supplier = sim.getElementsByTagName('Supplier')[0].innerHTML;
+      const phongthuy = sim.getElementsByTagName('PhongThuyId')[0] !== undefined ? sim.getElementsByTagName('PhongThuyId')[0].innerHTML : '?';
 
       result.push({
         phoneNumber,
@@ -272,6 +281,7 @@ class Octopus {
         networkOperator,
         tag,
         supplier,
+        phongthuy
       })
     }
 

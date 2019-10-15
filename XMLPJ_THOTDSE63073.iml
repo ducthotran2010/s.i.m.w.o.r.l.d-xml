@@ -23,5 +23,6 @@
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" name="sqljdbc42" level="project" />
     <orderEntry type="library" name="jstl-1.2" level="project" />
+    <orderEntry type="library" name="jsoup-1.12.1" level="project" />
   </component>
 </module>

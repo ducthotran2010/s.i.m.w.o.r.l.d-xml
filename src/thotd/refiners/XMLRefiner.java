@@ -1,6 +1,8 @@
 package thotd.refiners;
 
 import static thotd.constants.XMLRefineConstant.*;
+
+import org.jsoup.Jsoup;
 import thotd.constants.CharacterConstant;
 import thotd.utils.CharacterUtil;
 
@@ -11,9 +13,6 @@ import java.util.Stack;
 
 
 public class XMLRefiner implements Serializable {
-    private static final int EMPTY_TAG_TYPE = 1;
-    private static final int OPEN_TAG_TYPE = 2;
-    private static final int CLOSE_TAG_TYPE = 3;
 
     private String state;
     private StringBuilder writer;
@@ -110,7 +109,10 @@ public class XMLRefiner implements Serializable {
         }
 
         if (CONTENT.equals(state)) {
-            writer.append(content.toString().trim().replace("&","&amp;"));
+            String parsedEntity = Jsoup.parse(content.toString()).text()
+                    .trim()
+                    .replaceAll("&", "&amp;");
+            writer.append(parsedEntity);
         }
 
         while (!stack.isEmpty()){
@@ -346,9 +348,10 @@ public class XMLRefiner implements Serializable {
     private void handleStateContent(char character) {
         if (character == CharacterConstant.LT) {
             state = OPEN_BRACKET;
-            writer.append(content.toString()
-                            .trim()
-                            .replaceAll("&", "&amp;"));
+            String parsedEntity = Jsoup.parse(content.toString()).text()
+                    .trim()
+                    .replaceAll("&", "&amp;");
+            writer.append(parsedEntity);
         } else {
             content.append(character);
         }
