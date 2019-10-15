@@ -14,7 +14,6 @@
     <link href="${pageContext.request.contextPath}/assests/css/global.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/assests/css/home.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
 
 <%@include file="components/navbar.jspf" %>
 <div class="home_main view">

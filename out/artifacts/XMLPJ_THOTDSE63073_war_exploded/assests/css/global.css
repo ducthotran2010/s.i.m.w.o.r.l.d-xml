@@ -4,7 +4,21 @@
 */
 
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+:root {
+	--table-radius: 5px;
+}
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+*:focus {
+	outline-color: #ff6868;
+}
 
 a {
 	text-decoration: none;
@@ -26,6 +40,14 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Press Start 2P', cursive;
 }
 
+input[type="text"], input[type="number"] {
+	width: 100%;
+	padding: 12px 24px;
+	font-size: 14px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+}
+
 .banner {
 	transition: all 1s;
 }
@@ -35,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav {
-	box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
 }
 
 .nav-item {
@@ -49,6 +71,73 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-item.active {
 	color:#ed1c24;
+}
+
+#result-message {
+    padding: 20px;
+}
+
+.home_table {
+	border-radius: var(--table-radius);
+	margin: auto;
+	box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+	border-spacing: 0;
+	border-collapse: separate;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	width: 90%;
+}
+
+.home_table .home_tr--head th {
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 40px;
+	text-align: left;
+	background-color: #ff6868;
+	color: white;
+}
+
+
+.home_table .home_tr--body td a {
+	padding-left: 20px;
+	padding-right: 40px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.home_table .home_tr--body td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+.home_table .home_tr--body td:nth-child(2) {
+	font-weight: 600;
+	color: #9c0000;
+}
+
+.home_table .home_tr--body {
+	transition: all 0.2s ease;
+}
+
+.home_table .home_tr--body:hover {
+	background-color: #ddd;;
+}
+
+.home_table .home_tr--head th:first-child {
+	border-top-left-radius: var(--table-radius);
+}
+
+.home_table .home_tr--head th:last-child {
+	border-top-right-radius: var(--table-radius);
+}
+
+.home_table .home_tr--body:last-child td:first-child {
+	border-bottom-left-radius: var(--table-radius);
+}
+
+.home_table .home_tr--body:last-child td:last-child {
+	border-bottom-right-radius: var(--table-radius);
 }
 
 /* CONSTANT TEXT */
@@ -76,6 +165,9 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
+.text-gray {
+	color: #898989;
+}
 
 /* CONSTANT MARGIN */
 .my-4 {
@@ -97,13 +189,26 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 40px;
 }
 /* CONSTANT PADDING */
+.p-8 {
+	padding: 8px;
+}
+
 .p-10 {
 	padding: 10px;
+}
+
+.p-20 {
+	padding: 20px;
 }
 
 .py-40 {
 	padding-top: 40px;
 	padding-bottom: 40px;
+}
+
+.py-20 {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 /* CONSTANT FLEX */
@@ -136,5 +241,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hidden {
-	display: none;
+	display: none !important;
 }

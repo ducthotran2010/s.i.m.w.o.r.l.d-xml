@@ -1,22 +1,20 @@
 <%@ page pageEncoding="UTF-8" %>
 
-<h2 class="py-40 text-center ls-10 select-none banner">thegioithesim</h2>
+<h2 class="py-20 text-center ls-10 select-none banner" style="font-size:24px">thegioithesim</h2>
 <div>
 	<ul class="nav flex flex-row">
 		<%
 			final String[] navNames = {
 				"TRANG CHỦ",
-				"TOP SIM",
+				"PHONG THUỶ",
 				"TRA CỨU",
-				"TIN TỨC",
 				"ĐƠN HÀNG MỚI"
 			};
 
 			final String[] navIds = {
 				"nav-home",
-				"nav-top-top",
+				"nav-phongthuy",
 				"nav-look-up",
-				"nav-news",
 				"nav-orders"
 			};
 

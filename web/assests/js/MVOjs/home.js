@@ -283,14 +283,11 @@ class Octopus {
 
     let classValue = this.view.loader.className;
     if (!isLoading) {
-      if (!classValue.includes('hidden')) {
-        classValue = `${classValue} hidden`;
-      }
-    } else if (classValue.includes('hidden')) {
-      classValue = classValue.substring(0, classValue.length - 'hidden'.length - 1);
+        this.view.loader.classList.add('hidden');
+    } else {
+      this.view.loader.classList.remove('hidden');
     }
 
-    this.view.loader.setAttribute('class', classValue);
   }
 
   updateViewResult() {
@@ -301,22 +298,21 @@ class Octopus {
      */
     let classValue = this.view.result.className;
     if (isLoading) {
-      if (!classValue.includes('hidden')) {
-        classValue = `${classValue} hidden`;
-      }
-    } else if (classValue.includes('hidden')) {
-      classValue = classValue.substring(0, classValue.length - 'hidden'.length - 1);
+      this.view.result.classList.add('hidden');
+    } else {
+      this.view.result.classList.remove('hidden');
     }
-    this.view.result.setAttribute('class', classValue);
 
     if (!isLoading) {
       if (totalPage === 0) {
         this.view.resultMessage.innerHTML = 'Không có dữ liệu';
+        this.view.resultMessage.classList.remove('hidden');
         this.view.resultDetail.innerHTML = '';
       }
       else {
         const { result, offset } = this.model;
         this.view.resultMessage.innerHTML = '';
+        this.view.resultMessage.classList.add('hidden');
         this.view.renderResultDetail({ result: result.slice(offset, offset + SIZE), offset });
       }
     }

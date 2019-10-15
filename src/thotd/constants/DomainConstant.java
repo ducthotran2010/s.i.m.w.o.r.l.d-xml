@@ -8,7 +8,7 @@ public class DomainConstant {
     public static final String SODEPAMI = "https://sodepami.vn/";
     public static final String SIMSOVIETNAM = "https://simsovietnam.com/";
     public static final String GIAOSIMNHANH = "https://giaosimnhanh.vn/";
-    public static final String KHOSIM  = "https://khosim.com/";
+    public static final String KHOSIM  = "https://khosim.com";
     public static final String SIMTHANGLONG  = "https://simthanglong.vn/";
     public static final String TONGKHOSIM  = "https://tongkhosim.com/";
     public static final String SIMSODEP  = "https://simsodep.com/";

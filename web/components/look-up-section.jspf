@@ -1,9 +1,13 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 
-<form method="POST" action="GeneralController" id="look-up-form">
-    <input name="phoneNumber" placeholder="Nhập số cần tra cứu" type="text" value="${param.phoneNumber}"
-           pattern="\d{10}" autofocus/>
-    <input name="btnAction" value="LookUpPhoneNumber" type="hidden"/>
-    <button type="submit">Tra cứu ngay</button>
-</form>
+
+<div class="wrapper-body--head">
+    <p>Tra cứu đơn hàng, đoán tên người gọi!</p>
+    <form method="POST" action="GeneralController" id="look-up-form">
+        <input name="phoneNumber" placeholder="Nhập số cần tra cứu" type="text" value="${param.phoneNumber}"
+               pattern="\d{10}" required autofocus/>
+        <input name="btnAction" value="LookUpPhoneNumber" type="hidden"/>
+        <button type="submit">Tra cứu ngay</button>
+    </form>
+</div>

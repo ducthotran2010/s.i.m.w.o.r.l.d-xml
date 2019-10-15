@@ -1,37 +1,110 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 
-<form method="POST" action="GeneralController" id="search-form">
-    <input name="phone" placeholder="Nhập số cần tìm" type="text" pattern="\d{0,10}" autofocus/>
+<div class="home_main home_main--left">
+    <form method="POST" action="GeneralController" id="search-form" class="home_main home_form">
+        <p class="p-8 upper-case transition text-14 text-bold text-gray"
+           style="margin-bottom: 5px;margin-top:-10px">
+            TÌM KIẾM SỐ
+        </p>
+        <input name="phone" placeholder="Nhập bất kỳ dãy số bạn cần tìm" type="text" pattern="\d{0,10}" autofocus
+               class="home_form--input"/>
 
-    <label>
-        Bắt đầu
-        <input name="startWith" value="02" type="checkbox"/>
-        <input name="startWith" value="03" type="checkbox"/>
-        <input name="startWith" value="05" type="checkbox"/>
-        <input name="startWith" value="07" type="checkbox"/>
-        <input name="startWith" value="08" type="checkbox"/>
-        <input name="startWith" value="09" type="checkbox"/>
-    </label>
+        <div>
+            <p class="p-8 upper-case transition text-14 text-bold text-gray"
+               style="margin-bottom: 5px">
+                SỐ BẮT ĐẦU VỚI
+            </p>
 
-    <label>
-        Không chứa
-        <% for (int i = 0; i < 10; ++i) { %>
-        <input name="notInclude" value="<%=i%>" type="checkbox"/>
-        <%}%>
-    </label>
+            <div style="padding-left: 20px">
+                <label>
+                    <input name="startWith" value="02" type="checkbox"/>
+                    <span class="checker">02</span>
+                </label>
 
-    <label>
-        Nhà mạng
-        <input name="networkOperator" value="Viettel" type="checkbox"/>
-        <input name="networkOperator" value="Vinaphone" type="checkbox"/>
-    </label>
+                <label>
+                    <input name="startWith" value="03" type="checkbox"/>
+                    <span class="checker">03</span>
+                </label>
 
-    <label>
-        Giá cao nhất
-        <input name="priceLimit" type="range" min="0" max="100000000000"/>
+                <label>
+                    <input name="startWith" value="05" type="checkbox"/>
+                    <span class="checker">05</span>
+                </label>
 
-    </label>
-    <input name="btnAction" value="SearchSim" type="hidden"/>
-    <button type="submit">Tìm kiếm</button>
-</form>
+                <label>
+                    <input name="startWith" value="07" type="checkbox"/>
+                    <span class="checker">07</span>
+                </label>
+
+                <label>
+                    <input name="startWith" value="08" type="checkbox"/>
+                    <span class="checker">08</span>
+                </label>
+
+                <label>
+                    <input name="startWith" value="09" type="checkbox"/>
+                    <span class="checker">09</span>
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <p class="p-8 upper-case transition text-14 text-bold text-gray"
+               style="margin-bottom: 5px">
+                SỐ KHÔNG CHỨA
+            </p>
+
+            <div style="padding-left: 20px">
+                <% for (int i = 1; i <= 9; ++i) { %>
+                <label>
+                    <input name="notInclude" value="<%=i%>" type="checkbox"/>
+                    <span class="checker"><%=i%></span>
+                </label>
+                <%}%>
+            </div>
+        </div>
+
+        <div>
+
+            <p class="p-8 upper-case transition text-14 text-bold text-gray"
+               style="margin-bottom: 5px">
+                NHÀ MẠNG
+            </p>
+            <div style="padding-left: 20px">
+                <label>
+                    <input name="networkOperator" value="Viettel" type="checkbox"/>
+                    <span class="checker text">Viettel</span>
+                </label>
+                <label>
+                    <input name="networkOperator" value="Vinaphone" type="checkbox"/>
+                    <span class="checker text">Vinaphone</span>
+                </label>
+                <label>
+                    <input name="networkOperator" value="Mobifone" type="checkbox"/>
+                    <span class="checker text">Mobifone</span>
+                </label>
+                <label>
+                    <input name="networkOperator" value="Vietnamobile" type="checkbox"/>
+                    <span class="checker text">Vietnamobile</span>
+                </label>
+                <label>
+                    <input name="networkOperator" value="Gmobile" type="checkbox"/>
+                    <span class="checker text">Gmobile</span>
+                </label>
+            </div>
+        </div>
+
+        <div>
+
+            <p class="p-8 upper-case transition text-14 text-bold text-gray"
+               style="margin-bottom: 5px">
+                GIÁ CAO NHẤT
+            </p>
+            <input name="priceLimit" placeholder="Đơn vị nghìn đồng" type="number" min="0" max="10000000000" />
+        </div>
+
+        <input name="btnAction" value="SearchSim" type="hidden"/>
+        <button type="submit" class="btn-primary">Tìm kiếm</button>
+    </form>
+</div>

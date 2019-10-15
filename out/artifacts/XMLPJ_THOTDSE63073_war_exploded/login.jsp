@@ -9,7 +9,7 @@
 <html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Trang chủ | Thế Giới Thẻ SIM</title>
+	<title>Login | Thế Giới Thẻ SIM</title>
 	<link rel="icon" href="${pageContext.request.contextPath}/assests/image/logo.png"/>
 	<link href="${pageContext.request.contextPath}/assests/css/global.css" rel="stylesheet" type="text/css"/>
 </head>

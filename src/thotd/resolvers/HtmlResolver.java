@@ -27,6 +27,7 @@ public class HtmlResolver implements URIResolver, Serializable {
     @Override
     public Source resolve(String href, String base) {
         if (href != null && StringUtil.isStringStartWithListString(DomainConstant.DOMAIN_LIST, href)) {
+            System.out.println("good choose");
             try {
                 URLConnection urlConnection = new URL(href).openConnection();
                 StreamSource streamSource;
@@ -80,6 +81,7 @@ public class HtmlResolver implements URIResolver, Serializable {
         httpString = removeTag(httpString, "script");
         httpString = removeTag(httpString, "style");
         httpString = removeComment(httpString);
+        System.out.println(httpString);
 
         XMLRefiner xmlRefiner = new XMLRefiner();
         httpString = xmlRefiner.doRefine(httpString);

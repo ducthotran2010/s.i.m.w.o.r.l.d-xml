@@ -81,7 +81,8 @@ public class SimDAO implements Serializable {
 
 
     private String getSearchQuery(String phone, String priceLimit, String[] startWiths, String[] notIncludes, String[] networkOperators) {
-        String selectClause = "SELECT phone as PhoneNumber, price as Price, name as NetworkOperator, tagName as Tag FROM [Sim] AS S JOIN [NetworkOperator] AS N ON S.networkOperatorId = N.id JOIN [Tag] AS T ON S.tagId = T.id ";
+        String selectClause = "SELECT phone as PhoneNumber, price as Price, N.name as NetworkOperator, tagName as Tag, SU.name as Supplier " +
+                "FROM [Sim] AS S JOIN [NetworkOperator] AS N ON S.networkOperatorId = N.id LEFT JOIN [Tag] AS T ON S.tagId = T.id JOIN Supplier as SU ON S.supplierId = SU.id ";
 
         int[] lengths = {
                 phone == null ? 0 : 1,
@@ -95,7 +96,7 @@ public class SimDAO implements Serializable {
                 SQLQueryUtil.getConditions("phone", "LIKE", "", lengths[0]),
                 SQLQueryUtil.getConditions("price", "<=", "", lengths[1]),
                 SQLQueryUtil.getConditions("phone", "LIKE", "OR", lengths[2]),
-                SQLQueryUtil.getConditions("phone", "NOT LIKE", "OR", lengths[3]),
+                SQLQueryUtil.getConditions("phone", "NOT LIKE", "AND", lengths[3]),
                 SQLQueryUtil.getConditions("N.name", "=", "OR", lengths[4]),
         };
 
@@ -112,6 +113,7 @@ public class SimDAO implements Serializable {
         String formatClause = " FOR XML PATH('Sim'), ROOT('SimWorld')";
         String result = selectClause + conditionClause + formatClause;
 
+        System.out.println(result);
         return result;
     }
 

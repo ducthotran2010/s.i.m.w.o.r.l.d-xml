@@ -6,17 +6,15 @@
 		<%
 			final String[] navNames = {
 				"TRANG CHỦ",
-				"TOP SIM",
+				"PHONG THUỶ",
 				"TRA CỨU",
-				"TIN TỨC",
 				"ĐƠN HÀNG MỚI"
 			};
 
 			final String[] navIds = {
 				"nav-home",
-				"nav-top-top",
+				"nav-phongthuy",
 				"nav-look-up",
-				"nav-news",
 				"nav-orders"
 			};
 
