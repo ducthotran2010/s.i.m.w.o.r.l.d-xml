@@ -118,6 +118,10 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 10px;
 }
 
+.p-20 {
+	padding: 20px;
+}
+
 .py-40 {
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -158,5 +162,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hidden {
-	display: none;
+	display: none !important;
 }

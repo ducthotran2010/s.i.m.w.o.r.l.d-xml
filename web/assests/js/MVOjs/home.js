@@ -327,7 +327,7 @@ class Octopus {
 
     if (totalPage === 0) {
       this.view.paginationContainer.className = "hidden"
-      /* hide */
+        this.view.paginationContainer.classList
     } else {
       const currentPage = 1;
       this.setModel({ currentPage, offset: 0 });

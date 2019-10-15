@@ -20,7 +20,7 @@
 <div class="home_main view">
     <%@include file="components/search-section.jspf" %>
 
-    <div id="loader" class="transition">
+    <div id="loader" class="transition p-20">
         Loading...
     </div>
 

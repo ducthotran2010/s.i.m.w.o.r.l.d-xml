@@ -164,3 +164,7 @@ label input:checked + .checker {
     border-radius: 5px;
     margin-top: 20px;
 }
+
+#result-message {
+    padding: 20px;
+}
