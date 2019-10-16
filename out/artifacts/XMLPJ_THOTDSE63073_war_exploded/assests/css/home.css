@@ -1,3 +1,6 @@
+#result-message {
+    padding: 20px;
+}
 
 
 .home_main {
@@ -38,6 +41,7 @@
 
 #pagination-container button {
     padding: 12px 24px;
+    width: auto;
     border-radius: 5px;
 }
 

@@ -7,17 +7,18 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
 :root {
-	--table-radius: 5px;
+	--border-radius: 5px;
+	--theme: #ff6868;
 }
 
-* {
+*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
 	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
 	font-size: 14px;
 }
 
 *:focus {
-	outline-color: #ff6868;
+	outline-color: var(--theme);
 }
 
 a {
@@ -40,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Press Start 2P', cursive;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"], input[type="number"], input[type="password"] {
 	width: 100%;
 	padding: 12px 24px;
 	font-size: 14px;
@@ -48,16 +49,56 @@ input[type="text"], input[type="number"] {
 	border: 1px solid #ddd;
 }
 
+.button {
+	background-color: var(--theme);
+	font-weight: 600;
+	color: white;
+	width: 100%;
+	padding: 12px 24px;
+	border-radius: 5px;
+}
+
+.border {
+	border: 1px solid #ddd;
+}
+
+.control-group {
+	display: flex;
+	margin-bottom: 20px;
+}
+.control-group > *:first-child {
+	border-radius: var(--border-radius);
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	z-index: 1;
+	margin-right: -1px;
+}
+.control-group > *:last-child {
+	border-radius: 0px;
+	border-top-right-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+	background-color: var(--theme);
+	font-weight: 600;
+	color: white;
+	padding: 12px 24px;
+	width: 40%;
+	min-width: 175px;
+}
+
+.container {
+	width: 60%;
+	margin: auto;
+	min-width: 600px;
+
+}
+
+ /* Styling for app */
 .banner {
 	transition: all 1s;
 }
 
 .banner:hover {
-    color: #362bcc;
-}
-
-.nav {
-  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+	color: #362bcc;
 }
 
 .nav-item {
@@ -73,12 +114,8 @@ input[type="text"], input[type="number"] {
 	color:#ed1c24;
 }
 
-#result-message {
-    padding: 20px;
-}
-
 .home_table {
-	border-radius: var(--table-radius);
+	border-radius: var(--border-radius);
 	margin: auto;
 	box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 	border-spacing: 0;
@@ -94,7 +131,7 @@ input[type="text"], input[type="number"] {
 	padding-left: 20px;
 	padding-right: 40px;
 	text-align: left;
-	background-color: #ff6868;
+	background-color: var(--theme);
 	color: white;
 }
 
@@ -126,19 +163,19 @@ input[type="text"], input[type="number"] {
 }
 
 .home_table .home_tr--head th:first-child {
-	border-top-left-radius: var(--table-radius);
+	border-top-left-radius: var(--border-radius);
 }
 
 .home_table .home_tr--head th:last-child {
-	border-top-right-radius: var(--table-radius);
+	border-top-right-radius: var(--border-radius);
 }
 
 .home_table .home_tr--body:last-child td:first-child {
-	border-bottom-left-radius: var(--table-radius);
+	border-bottom-left-radius: var(--border-radius);
 }
 
 .home_table .home_tr--body:last-child td:last-child {
-	border-bottom-right-radius: var(--table-radius);
+	border-bottom-right-radius: var(--border-radius);
 }
 
 /* CONSTANT TEXT */
@@ -202,6 +239,10 @@ input[type="text"], input[type="number"] {
 	padding: 20px;
 }
 
+.p-40 {
+	padding: 40px;
+}
+
 .py-40 {
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -209,6 +250,10 @@ input[type="text"], input[type="number"] {
 
 .py-20 {
 	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.pb-20 {
 	padding-bottom: 20px;
 }
 
@@ -243,4 +288,12 @@ input[type="text"], input[type="number"] {
 
 .hidden {
 	display: none !important;
+}
+
+.shadow {
+	box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+.rounded {
+	border-radius: var(--border-radius);
 }

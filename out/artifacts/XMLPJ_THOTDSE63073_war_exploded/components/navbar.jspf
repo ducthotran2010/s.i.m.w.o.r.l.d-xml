@@ -2,7 +2,7 @@
 
 <h2 class="py-20 text-center ls-10 select-none banner" style="font-size:24px">thegioithesim</h2>
 <div>
-	<ul class="nav flex flex-row">
+	<ul class="flex flex-row shadow nav">
 		<%
 			final String[] navNames = {
 				"TRANG CHỦ",

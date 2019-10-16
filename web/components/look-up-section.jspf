@@ -4,7 +4,7 @@
 
 <div class="wrapper-body--head">
     <p>Tra cứu đơn hàng, đoán tên người gọi!</p>
-    <form method="POST" action="GeneralController" id="look-up-form">
+    <form method="POST" action="GeneralController" id="look-up-form" class="control-group">
         <input name="phoneNumber" placeholder="Nhập số cần tra cứu" type="text" value="${param.phoneNumber}"
                pattern="\d{10}" required autofocus/>
         <input name="btnAction" value="LookUpPhoneNumber" type="hidden"/>

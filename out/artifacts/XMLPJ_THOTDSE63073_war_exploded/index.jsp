@@ -30,7 +30,6 @@
 
                     <div id="pagination-container">
                         <div>
-
                             <button id="pagination-left">Trái</button>
                             <div>
                                 <form id="pagination-form" style="display: inline-block">

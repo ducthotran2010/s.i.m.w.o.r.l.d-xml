@@ -92,7 +92,7 @@ public class SimDAO implements Serializable {
 
 
     private String getSearchQuery(String phone, String priceLimit, String[] startWiths, String[] notIncludes, String[] networkOperators) {
-        String selectClause = "SELECT TOP 325 phone as PhoneNumber, price as Price, N.name as NetworkOperator, tagName as Tag, SU.name as Supplier, phongthuyId as PhongThuyId " +
+        String selectClause = "SELECT TOP 325 phone as PhoneNumber, price as Price, N.name as NetworkOperator, tagName as Tag, SU.name as Supplier, phongThuyNumber as PhongThuyId " +
                 "FROM [Sim] AS S JOIN [NetworkOperator] AS N ON S.networkOperatorId = N.id LEFT JOIN [Tag] AS T ON S.tagId = T.id JOIN Supplier as SU ON S.supplierId = SU.id ";
 
         int[] lengths = {

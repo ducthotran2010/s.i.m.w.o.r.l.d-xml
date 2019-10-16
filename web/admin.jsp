@@ -14,22 +14,29 @@
     <link href="${pageContext.request.contextPath}/assests/css/global.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <h2>Admin Dashboard</h2>
 
-    <p>Hello ${sessionScope.USER.fullName}</p>
-    <form method="post" action="AdminController">
-        <label>Crawl dữ liệu sim</label>
-        <input name="totalPage" value="2" type="number" min="1" max="10"/>
-        <input name="btnAction" value="Crawl" type="submit"/>
-    </form>
+    <h2 class="py-20 text-center ls-10 select-none banner shadow" style="font-size:24px">Admin Dashboard</h2>
 
-    <form method="post" action="AdminController">
-        <input name="btnAction" value="CrawlOrder" type="submit"/>
-    </form>
+    <div class="container">
+        <p>${sessionScope.USER.fullName}, crawl thôi chờ chi!</p>
+        <form method="post" action="AdminController" class="control-group">
+            <input name="totalPage" placeholder="Số trang trên mỗi domain" autofocus type="number" min="1" max="10"/>
+            <input name="btnAction" value="Crawl" type="hidden"/>
+            <button class="button">Lấy dữ liệu Sim</button>
+        </form>
 
-    <form method="post" action="AdminController">
-        <input name="btnAction" value="CrawlPhongThuy" autofocus type="submit"/>
-    </form>
+        <form method="post" action="AdminController">
+            <input name="btnAction" value="CrawlOrder" type="hidden"/>
+            <button class="button">Lấy Đơn Hàng</button>
+        </form>
+
+        <form method="post" action="AdminController">
+            <input name="btnAction" value="CrawlPhongThuy" type="hidden"/>
+            <button class="button">Lấy dữ liệu Phong Thuỷ</button>
+        </form>
+
+        </form>
+    </div>
 
 </body>
 </html>
