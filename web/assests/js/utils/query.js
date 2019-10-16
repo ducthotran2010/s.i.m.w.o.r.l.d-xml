@@ -41,6 +41,5 @@ const getLink = ({ phone, supplier }) => {
 
 
 const getPhongThuyLink = (phone) => {
-  const last4digit = phone.substring(6);
-    return `phongthuy.jsp?phone=${last4digit}`;
+    return `phongthuy.jsp?phone=${phone}`;
 }

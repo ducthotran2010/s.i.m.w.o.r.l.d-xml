@@ -16,7 +16,7 @@
 
 <div class="wrapper-body--head">
     <p>Tra số phong thuỷ, tránh vận rủi khả dĩ</p>
-    <form class="input-wrapper" onsubmit="function handeSubmit(e) { e.preventDefault() }">
+    <form class="input-wrapper" onsubmit="return false">
         <input id="input" name="phone" placeholder="Nhập SDT hoặc 4 số cuối cần tra cứu" type="text" value="${param.phone}"
                pattern="(\d{4}|\d{10})" required autofocus/>
     </form>

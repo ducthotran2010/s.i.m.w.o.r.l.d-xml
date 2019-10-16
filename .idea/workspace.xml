@@ -8,12 +8,15 @@
   <component name="ChangeListManager">
     <list default="true" id="33adb6b0-3c92-4c8e-adaa-0de8db9b0b2c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/MVOjs/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/MVOjs/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/MVOjs/phongthuy.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/MVOjs/phongthuy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/utils/query.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/assests/js/utils/query.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/navbar.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/navbar.jspf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assests/js/MVOjs/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/js/MVOjs/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/phongthuy-section.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/components/phongthuy-section.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/phongthuy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/XMLPJ_THOTDSE63073_war_exploded/phongthuy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thotd/dao/PhongThuyDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thotd/dao/PhongThuyDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assests/js/MVOjs/phongthuy.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/js/MVOjs/phongthuy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/assests/js/utils/query.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/assests/js/utils/query.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/components/navbar.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/web/components/navbar.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/components/phongthuy-section.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/web/components/phongthuy-section.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/phongthuy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/phongthuy.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -272,7 +275,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570798665568</updated>
       <workItem from="1570798669357" duration="72811000" />
-      <workItem from="1571050874739" duration="43346000" />
+      <workItem from="1571050874739" duration="49020000" />
     </task>
     <servers />
   </component>

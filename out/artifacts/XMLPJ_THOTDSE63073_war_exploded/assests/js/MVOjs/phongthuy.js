@@ -1,7 +1,9 @@
 class View {
-    constructor({inputId, tableId, data}) {
+    constructor({inputId, tableId, errorMessageId, data}) {
         this.input = document.getElementById(inputId);
         this.table = document.getElementById(tableId);
+        this.errorMessage = document.getElementById(errorMessageId);
+
         this.render({data});
     }
 
@@ -26,8 +28,23 @@ class View {
         return thead;
     }
 
+    showError(isShowed) {
+        if (isShowed === false) {
+            this.errorMessage.classList.add('hidden');
+        } else {
+            this.errorMessage.classList.remove('hidden');
+        }
+    }
+
     render({data}) {
-        if (data === undefined) return;
+        if (data === undefined || (Array.isArray(data) && data.length === 0)) {
+            this.showError(true);
+            return;
+        } else {
+            this.showError(false);
+        }
+        ;
+
         this.table.innerHTML = '';
         const thead = this.getTableHead();
         this.table.appendChild(thead);
@@ -74,37 +91,38 @@ class Model {
 
 class Octopus {
     constructor() {
-        this.view = new View({inputId: 'input', tableId: 'result'});
+        this.view = new View({inputId: 'input', tableId: 'result', errorMessageId: 'error-message'});
         this.model = new Model({});
 
         this.view.input.addEventListener('keyup', this.handleSearch);
     }
 
     handleSearch = () => {
-        const {data} = this.model;
+        const { data } = this.model;
         let text = this.view.input.value;
-        let value = parseInt(text);
-        if (typeof value === 'number' && (text.length === 4 || text.length === 10) && data !== undefined) {
-            if (text.length === 10) {
-                text = text.slice(6);
-                value = parseInt(text);
-                if (typeof value !== 'number') return;
-            }
 
-            const a = value / 80;
-            const b = a - Math.floor(a);
-            const c = b * 80;
-            const d = Math.round(c);
-
-            const result = data.filter(({number}) => number == d);
-            if (result.length > 0) {
-                this.view.render({data: result});
-            } else {
-                this.view.render({data});
-            }
-        } else {
-            this.view.render({data});
+        if (text.length === 10 && text.match(/\d{10}/) !== null) {
+            text = text.slice(6);
         }
+
+        if (text.length === 4 && text.match(/\d{4}/) !== null && data !== undefined) {
+            const value = parseInt(text);
+
+            if (typeof value === 'number') {
+                const a = value / 80;
+                const b = a - Math.floor(a);
+                const c = b * 80;
+                const d = Math.round(c);
+
+                const result = data.filter(({number}) => number == d);
+                if (result.length > 0) {
+                    this.view.render({data: result});
+                    return;
+                }
+            }
+        }
+
+        this.view.render({data});
     }
 
     getDataFromDOM = (dom) => {

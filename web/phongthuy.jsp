@@ -23,6 +23,9 @@
         <%@include file="components/phongthuy-section.jspf" %>
         <script>document.getElementById('nav-phongthuy').classList.add('active');</script>
         <table id="result" class="home_table"></table>
+        <div class="wrapper-body--head">
+            <p id="error-message">Không tìm thấy dữ liệu</p>
+        </div>
 
         <script src="${pageContext.request.contextPath}/assests/js/constants.js"></script>
         <script src="${pageContext.request.contextPath}/assests/js/utils/param.js"></script>

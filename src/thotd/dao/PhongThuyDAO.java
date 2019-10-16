@@ -51,7 +51,7 @@ public class PhongThuyDAO implements Serializable {
 
         try {
             connection = DBUtil.createConnection();
-            String query = "SELECT number as Number, mean as Mean, brief as Brief FROM [PhongThuy] FOR XML PATH('Section'), ROOT('PhongThuy') ";
+            String query = "SELECT number as Number, mean as Mean, brief as Brief FROM [PhongThuy] ORDER BY number FOR XML PATH('Section'), ROOT('PhongThuy') ";
 
             statement = connection.prepareStatement(query);
             resultSet = statement.executeQuery();
