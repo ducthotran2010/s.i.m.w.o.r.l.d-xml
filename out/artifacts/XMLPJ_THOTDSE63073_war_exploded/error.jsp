@@ -8,10 +8,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Error</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Error | Thế Giới Thẻ SIM</title>
+    <link rel="icon" href="${pageContext.request.contextPath}/assests/image/logo.png"/>
+    <link rel="icon" href="${pageContext.request.contextPath}/assests/image/logo.png"/>
+    <link href="${pageContext.request.contextPath}/assests/css/global.css" rel="stylesheet" type="text/css"/>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
 </head>
 <body>
-    <h2>You got error</h2>
+    <p class="p-8 upper-case transition text-14 text-bold text-gray">Oppppps, something went wrong!</p>
 
     <p><%= (request.getAttribute("Error") != null)
             ? request.getAttribute("Error")

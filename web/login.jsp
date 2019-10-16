@@ -15,7 +15,7 @@
 	<link href="${pageContext.request.contextPath}/assests/css/login.css" rel="stylesheet" type="text/css"/>
 </head>
 	<body>
-		<div class="shadow p-40 rounded border container">
+		<div class="shadow p-40 rounded border container-login">
 			<h2 class="text-center ls-10 pb-20">thegioithesim</h2>
 
 			<form method="post" action="AdminController" class="login_form">
