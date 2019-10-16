@@ -4,10 +4,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class AdminController extends HttpServlet {
-    private static final String LOGIN_PAGE = "LoginServlet";
+    private static final String LOGIN_PAGE = "login.jsp";
     private static final String CRAWL_PAGE = "CrawlServlet";
     private static final String CRAWL_ORDER_PAGE = "CrawlOrderServlet";
     private static final String CRAWL_PHONGTHUY_PAGE = "CrawlPhongThuyServlet";
@@ -18,11 +19,15 @@ public class AdminController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String url = ERROR_PAGE;
         try {
+            HttpSession session = request.getSession();
+            if (session.getAttribute("USER") == null) {
+                url = LOGIN_PAGE;
+                return;
+            }
+
             String btnAction = request.getParameter("btnAction");
 
-            if ("Login".equals(btnAction)) {
-                url = LOGIN_PAGE;
-            } else if ("Crawl".equals(btnAction)) {
+            if ("Crawl".equals(btnAction)) {
                 url = CRAWL_PAGE;
             } else if ("CrawlOrder".equals(btnAction)) {
                 url = CRAWL_ORDER_PAGE;

@@ -1,4 +1,4 @@
-package thotd.controllers.admin;
+package thotd.controllers.general;
 
 import thotd.constants.LoginConstant;
 import thotd.dao.AccountDAO;

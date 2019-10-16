@@ -18,7 +18,7 @@
 		<div class="shadow p-40 rounded border container-login">
 			<h2 class="text-center ls-10 pb-20">thegioithesim</h2>
 
-			<form method="post" action="AdminController" class="login_form">
+			<form method="post" action="GeneralController" class="login_form">
 				<input name="username" placeholder="Tên tài khoản" type="text" autofocus />
 				<input name="password" placeholder="Mật khẩu" type="password" />
 				<input name="btnAction" class="button" value="Login" type="submit" />

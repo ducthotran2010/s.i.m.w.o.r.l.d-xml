@@ -25,7 +25,7 @@ public class DataResolver implements Serializable {
         Integer networkOperatorId;
         String tagName;
         Integer tagId;
-        Integer phongThuyId;
+        Integer phongThuyNumber;
         NetworkOperators networkOperators = new NetworkOperators();
         networkOperators = (NetworkOperators) JAXBUtil.unmarshal(networkOperators.getClass(), domResult.getNode());
 
@@ -56,22 +56,22 @@ public class DataResolver implements Serializable {
                 tagId = handleGettingIdByNameGeneral(tagDAO, tagName);
 
                 for (Sim sim : tag.getSim()) {
-                    phongThuyId = PhongThuyUtil.getNumber(sim.getPhoneNumber());
-                    handleInsertSim(sim, networkOperatorId, tagId, supplierId, phongThuyId);
+                    phongThuyNumber = PhongThuyUtil.getNumber(sim.getPhoneNumber());
+                    handleInsertSim(sim, networkOperatorId, tagId, supplierId, phongThuyNumber);
                 }
             }
         }
     }
 
-    private boolean handleInsertSim(Sim sim, int networkOperatorId, Integer tagId, int supplierId, Integer phongThuyId) {
+    private boolean handleInsertSim(Sim sim, int networkOperatorId, Integer tagId, int supplierId, Integer phongThuyNumber) {
         SimDAO simDAO = new SimDAO();
         boolean result = false;
 
         try {
-            result = simDAO.insert(sim, networkOperatorId, tagId, supplierId, phongThuyId);
+            result = simDAO.insert(sim, networkOperatorId, tagId, supplierId, phongThuyNumber);
         } catch (Exception e) {
             try {
-                result = simDAO.update(sim, networkOperatorId, tagId, supplierId, phongThuyId);
+                result = simDAO.update(sim, networkOperatorId, tagId, supplierId, phongThuyNumber);
             } catch (Exception ex) {
                 ex.printStackTrace();
             }

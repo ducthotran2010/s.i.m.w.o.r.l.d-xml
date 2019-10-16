@@ -275,7 +275,7 @@ class Octopus {
       const networkOperator = sim.getElementsByTagName('NetworkOperator')[0].innerHTML;
       const tag = sim.getElementsByTagName('Tag')[0] !== undefined ? sim.getElementsByTagName('Tag')[0].innerHTML : 'Số Đẹp';
       const supplier = sim.getElementsByTagName('Supplier')[0].innerHTML;
-      const phongthuy = sim.getElementsByTagName('PhongThuyId')[0] !== undefined ? sim.getElementsByTagName('PhongThuyId')[0].innerHTML : '?';
+      const phongthuy = sim.getElementsByTagName('PhongThuyNumber')[0] !== undefined ? sim.getElementsByTagName('PhongThuyNumber')[0].innerHTML : '?';
 
       result.push({
         phoneNumber,

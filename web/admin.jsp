@@ -20,7 +20,7 @@
     <div class="container">
         <p>${sessionScope.USER.fullName}, crawl thôi chờ chi!</p>
         <form method="post" action="AdminController" class="control-group">
-            <input name="totalPage" placeholder="Số trang trên mỗi domain" autofocus type="number" min="1" max="10"/>
+            <input required name="totalPage" placeholder="Số trang trên mỗi domain" autofocus type="number" min="1" max="10"/>
             <input name="btnAction" value="Crawl" type="hidden"/>
             <button class="button">Lấy dữ liệu Sim</button>
         </form>

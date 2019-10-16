@@ -35,7 +35,7 @@
 
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>thotd.controllers.admin.LoginServlet</servlet-class>
+        <servlet-class>thotd.controllers.general.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -75,7 +75,7 @@
 
     <servlet>
         <servlet-name>LoginRoute</servlet-name>
-        <servlet-class>thotd.controllers.admin.LoginRoute</servlet-class>
+        <servlet-class>thotd.controllers.general.LoginRoute</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginRoute</servlet-name>

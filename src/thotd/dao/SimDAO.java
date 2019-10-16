@@ -27,11 +27,11 @@ public class SimDAO implements Serializable {
     }
 
 
-    public boolean insert(Sim sim, int networkOperatorId, Integer tagId, int supplierId, Integer phongThuyId) throws SQLException, ClassNotFoundException {
+    public boolean insert(Sim sim, int networkOperatorId, Integer tagId, int supplierId, Integer phongThuyNumber) throws SQLException, ClassNotFoundException {
         boolean result = false;
         try {
             connection = DBUtil.createConnection();
-            String query = "INSERT INTO Sim (phone, price, networkOperatorId, tagId, supplierId, phongthuyId) VALUES (?, ?, ?, ?, ?, ?) ";
+            String query = "INSERT INTO Sim (phone, price, networkOperatorId, tagId, supplierId, phongThuyNumber) VALUES (?, ?, ?, ?, ?, ?) ";
 
             statement = connection.prepareStatement(query);
             statement.setString(1, sim.getPhoneNumber());
@@ -43,8 +43,8 @@ public class SimDAO implements Serializable {
                 statement.setNull(4, Types.INTEGER);
             }
             statement.setInt(5, supplierId);
-            if (phongThuyId != null) {
-                statement.setInt(6, phongThuyId);
+            if (phongThuyNumber != null) {
+                statement.setInt(6, phongThuyNumber);
             } else {
                 statement.setNull(6, Types.INTEGER);
             }
@@ -56,12 +56,12 @@ public class SimDAO implements Serializable {
         return result;
     }
 
-    public boolean update(Sim sim, Integer networkOperatorId, Integer tagId, int supplierId, Integer phongThuyId) throws SQLException, ClassNotFoundException {
+    public boolean update(Sim sim, Integer networkOperatorId, Integer tagId, int supplierId, Integer phongThuyNumber) throws SQLException, ClassNotFoundException {
         boolean result = false;
 
         try {
             connection = DBUtil.createConnection();
-            String query = "UPDATE Sim SET price = ?, networkOperatorId = ?, tagId = ?, supplierId = ?, phongthuyId = ? WHERE phone = ?";
+            String query = "UPDATE Sim SET price = ?, networkOperatorId = ?, tagId = ?, supplierId = ?, phongThuyNumber = ? WHERE phone = ?";
 
             statement = connection.prepareStatement(query);
             statement.setLong(1, sim.getPrice());
@@ -75,8 +75,8 @@ public class SimDAO implements Serializable {
 
             statement.setInt(4, supplierId);
 
-            if (phongThuyId != null) {
-                statement.setInt(5, phongThuyId);
+            if (phongThuyNumber != null) {
+                statement.setInt(5, phongThuyNumber);
             } else {
                 statement.setNull(5, java.sql.Types.INTEGER);
             }
@@ -92,7 +92,7 @@ public class SimDAO implements Serializable {
 
 
     private String getSearchQuery(String phone, String priceLimit, String[] startWiths, String[] notIncludes, String[] networkOperators) {
-        String selectClause = "SELECT TOP 325 phone as PhoneNumber, price as Price, N.name as NetworkOperator, tagName as Tag, SU.name as Supplier, phongThuyNumber as PhongThuyId " +
+        String selectClause = "SELECT TOP 325 phone as PhoneNumber, price as Price, N.name as NetworkOperator, tagName as Tag, SU.name as Supplier, phongThuyNumber as PhongThuyNumber " +
                 "FROM [Sim] AS S JOIN [NetworkOperator] AS N ON S.networkOperatorId = N.id LEFT JOIN [Tag] AS T ON S.tagId = T.id JOIN Supplier as SU ON S.supplierId = SU.id ";
 
         int[] lengths = {
