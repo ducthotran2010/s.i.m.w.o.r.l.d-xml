@@ -31,10 +31,10 @@ const query = ({ method, url, params, callback }) => {
 const getLink = ({ phone, supplier }) => {
   switch (supplier) {
     case 'Sodepami':
-      return `https://simsodep.com/${phone}.html`;
+      return `https://sodepami.vn/${phone}`;
   
     case 'Simsodep':
-      return `https://sodepami.vn/${phone}`;
+      return `https://simsodep.com/${phone}.html`;
   }
 }
 

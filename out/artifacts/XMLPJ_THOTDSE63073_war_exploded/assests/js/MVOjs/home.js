@@ -156,7 +156,7 @@ class Octopus {
     this.view.form.addEventListener('submit', this.handleSubmitForm);
     this.view.paginationLeft.addEventListener('click', this.handlePaginationLeft);
     this.view.paginationRight.addEventListener('click', this.handlePaginationRight);
-    this.view.paginationInput.addEventListener('keyup', this.handlePaginationInput);
+    this.view.paginationInput.addEventListener('keypress', this.handlePaginationInput);
     this.view.paginationForm.addEventListener('submit', this.handlePaginationSubmit);
   }
 
@@ -167,7 +167,9 @@ class Octopus {
 
   handlePaginationSubmit = (event) => {
     event.preventDefault();
-    const nextPage = this.view.paginationInput.value;
+    const nextPage = parseInt(this.view.paginationInput.value, 10);
+    if (typeof nextPage !== 'number') return;
+
     const offset = (nextPage - 1) * SIZE;
     if (1 <= nextPage && nextPage <= this.model.totalPage) {
       this.setModel({ offset, currentPage: nextPage });
@@ -291,7 +293,6 @@ class Octopus {
   updateViewLoader() {
     const { isLoading } = this.model;
 
-    let classValue = this.view.loader.className;
     if (!isLoading) {
         this.view.loader.classList.add('hidden');
     } else {
@@ -306,7 +307,6 @@ class Octopus {
     /**
      * Update class name
      */
-    let classValue = this.view.result.className;
     if (isLoading) {
       this.view.result.classList.add('hidden');
     } else {

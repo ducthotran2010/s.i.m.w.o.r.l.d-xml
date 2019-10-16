@@ -8,22 +8,18 @@
 				"TRANG CHỦ",
 				"PHONG THUỶ",
 				"TRA CỨU",
-				"ĐƠN HÀNG MỚI"
 			};
 
 			final String[] navIds = {
 				"nav-home",
 				"nav-phongthuy",
 				"nav-look-up",
-				"nav-orders"
 			};
 
 			final String[] navLinks = {
 				"index.jsp",
 				"phongthuy.jsp",
 				"look-up.jsp",
-				"#",
-				"#",
 			};
 
 			for (int i = 0; i < navNames.length; ++i) { %>
