@@ -28,9 +28,7 @@ import org.jsoup.Jsoup;
 public class HtmlResolver implements URIResolver, Serializable {
     @Override
     public Source resolve(String href, String base) {
-        System.out.println("here....");
         if (href != null && StringUtil.isStringStartWithListString(DomainConstant.DOMAIN_LIST, href)) {
-            System.out.println("good choose");
             try {
                 URLConnection urlConnection = new URL(href).openConnection();
                 StreamSource streamSource;
