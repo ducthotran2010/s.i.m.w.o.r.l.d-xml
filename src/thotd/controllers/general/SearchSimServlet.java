@@ -22,12 +22,7 @@ public class SearchSimServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/xml;charset=UTF-8");
-        String url = DESTINATION;
         try {
-            /**
-             * need optimize for dom
-             */
-
             String phone = request.getParameter("phone");
             String priceLimit = request.getParameter("priceLimit");
             String[] startWiths = request.getParameterValues("startWith");

@@ -76,7 +76,6 @@ public class PathConstant {
      */
     public static final String CONFIG_PHONGTHUY_XML = "assests/configs/xml/phongthuy.xml";
     public static final String CONFIG_PHONGTHUY_XSL = "assests/configs/xsl/phongthuy/chosim24h.xsl";
-    public static final String CONFIG_PHONGTHUY_INFO = "assests/init_phongthuy.html";
 
 
     public static final List<String> CONFIG_PHONGTHUY_SCHEMAS = Arrays.asList(

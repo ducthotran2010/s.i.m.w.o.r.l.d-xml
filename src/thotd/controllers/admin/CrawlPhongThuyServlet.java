@@ -30,15 +30,17 @@ public class CrawlPhongThuyServlet extends HttpServlet {
             String realPath = request.getServletContext().getRealPath("/");
             String xmlPath = realPath + PathConstant.CONFIG_PHONGTHUY_XML;
             String xslPath = realPath + PathConstant.CONFIG_PHONGTHUY_XSL;
+            DOMResult domResult = Crawler.doCrawlForSingleSite(xmlPath, xslPath);
 
            /**
             * Save to file in development stage
             */
-            DOMResult domResult = Crawler.doCrawlForSingleSite(xmlPath, xslPath);
+           /*
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             StreamResult streamResult = new StreamResult("/Users/thotd/Desktop/crawled.xml");
             transformer.transform(new DOMSource(domResult.getNode()), streamResult);
+            */
 
            /**
             * Save to database
@@ -49,7 +51,7 @@ public class CrawlPhongThuyServlet extends HttpServlet {
             url = ADMIN_PAGE;
         } catch (Exception e) {
             request.setAttribute("Error", "Could not crawl data");
-            log("Error at CrawlOrderServlet", e);
+            log("Error at CrawlPhongThuyServlet", e);
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

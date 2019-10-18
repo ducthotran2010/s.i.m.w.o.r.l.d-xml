@@ -18,26 +18,18 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 
 public class PhongThuyServlet extends HttpServlet {
-    private static final String DESTINATION = "phongthuy.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/xml;charset=UTF-8");
-        String url = DESTINATION;
         try {
-            String phone = request.getParameter("phone");
-            String priceLimit = request.getParameter("priceLimit");
-            String[] startWiths = request.getParameterValues("startWith");
-            String[] notIncludes = request.getParameterValues("notInclude");
-            String[] networkOperators = request.getParameterValues("networkOperator");
-
             PhongThuyDAO phongThuyDAO = new PhongThuyDAO();
             String result = phongThuyDAO.getAll();
             response.setStatus(200);
             response.getWriter().print(result);
         } catch (Exception e ) {
             response.setStatus(500);
-            log("Error at SearchSimServlet", e);
+            log("Error at PhongThuyServlet", e);
         }
     }
 

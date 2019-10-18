@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
                     url = ADMIN_PAGE;
 
                 case LoginConstant.LOGIN_INVALID:
-                    request.setAttribute("Error", "Your username or password is removed");
+                    request.setAttribute("Error", "Your account is removed");
 
                 default:
                 case LoginConstant.LOGIN_FAIL:
